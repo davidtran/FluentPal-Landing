@@ -35,6 +35,7 @@ export default function Page() {
       }
     }
   }, []);
+  
   useEffect(() => {
     //@ts-ignore
     fbq('track', 'ViewContent');
