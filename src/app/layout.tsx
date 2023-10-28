@@ -3,12 +3,19 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 import Script from 'next/script';
+import { Montserrat, Raleway } from 'next/font/google';
+import cls from 'classnames';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({
+  subsets: ['vietnamese'],
+  variable: '--font-montserrat',
+});
+const raleway = Raleway({ subsets: ['vietnamese'], variable: '--font-raleway' });
 
 export const metadata: Metadata = {
   title: 'FluentPal - Giao tiếp tiếng Anh thành thạo sau 3 tháng với gia sư AI',
-  description: 'Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày',
+  description:
+    'Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày',
 };
 
 export default function RootLayout({
@@ -19,23 +26,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>FluentPal - Giao tiếp tiếng Anh thành thạo sau 3 tháng với gia sư AI</title>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=608504484568454&ev=PageView&noscript=1"
-        />
-      </noscript>
-      <meta
-        name="keywords"
-        content="Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày"
-      ></meta>
-      <meta
-        property="fb:page_id"
-        content="100092194243400"
-      ></meta>
+        <title>
+          FluentPal - Giao tiếp tiếng Anh thành thạo sau 3 tháng với gia sư AI
+        </title>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=608504484568454&ev=PageView&noscript=1"
+          />
+        </noscript>
+        <meta
+          name="keywords"
+          content="Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày"
+        ></meta>
+        <meta
+          property="fb:page_id"
+          content="100092194243400"
+        ></meta>
       </Head>
       <Script
         async
@@ -63,8 +72,10 @@ fbq('track', 'PageView');
 
 <!-- End Meta Pixel Code -->
 `}</Script>
-      
-      <body className={inter.className}>{children}</body>
+
+      <body className={cls(montserrat.variable, raleway.variable)}>
+        {children}
+      </body>
     </html>
   );
 }
