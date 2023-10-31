@@ -2,6 +2,13 @@ export default function Page() {
   return (
     <div className="m-auto pt-[40px] max-w-[1024px] min-h-[100vh] flex flex-col gap-5 px-5 md:px-0">
       <div className="font-title font-bold text-[30px]">Hỗ trợ</div>
+
+      <div>
+        If you have any questions or requests regarding support or payment.{' '}
+        <br />
+        Please contact us through the following these 2 channels:
+      </div>
+
       <div>
         Nếu bạn có bất cứ thắc mắc hoặc yêu cầu về hỗ trợ hoặc thanh toán.{' '}
         <br />
