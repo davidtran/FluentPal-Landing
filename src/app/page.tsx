@@ -148,7 +148,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 flex justify-center items-center relative">
             <img
               src="/hero.png"
-              className="mx-auto absolute md:relative top-[50px]"
+              className="w-[240px] mx-auto absolute md:relative top-[50px] md:top-auto md:rotate-2"
             />
           </div>
         </div>
