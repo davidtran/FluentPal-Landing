@@ -8,8 +8,12 @@
   --background-end-rgb: 255, 255, 255; 
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #000;  
   font-family: var(--font-raleway);
-  font-size: 16px;
+  font-size: 16px;  
 }

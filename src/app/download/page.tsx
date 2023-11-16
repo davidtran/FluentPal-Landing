@@ -3,17 +3,8 @@
 import { useEffect } from 'react';
 import Lottie, { AnimationItem } from 'lottie-web';
 import loadingJson from '@/assets/loading.json';
+import { getDownloadLink } from '@/utils/general';
 
-const getMobileOS = (navigator: Navigator) => {
-  const ua = navigator.userAgent;
-  console.log(ua);
-  if (/android/i.test(ua)) {
-    return 'Android';
-  } else if (/iPad|iPhone|iPod|Macintosh/.test(ua)) {
-    return 'iOS';
-  }
-  return 'Other';
-};
 
 export default function Page() {
 
@@ -39,18 +30,10 @@ export default function Page() {
   useEffect(() => {
     //@ts-ignore
     fbq('track', 'ViewContent');
-    const os = getMobileOS(navigator);    
-    if (os === 'iOS') {
-      setTimeout(() => {
-        window.location.href =
-          'https://apps.apple.com/us/app/fluentpal/id6462874346';
-      }, 0);
-    } else if (os === 'Android') {
-      setTimeout(() => {
-        window.location.href =
-          'https://play.google.com/store/apps/details?id=com.fluentai';
-      }, 0);
-    }
+    setTimeout(() => {
+      window.location.href =
+        getDownloadLink();
+    }, 0);
   }, []);
 
   return (

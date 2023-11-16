@@ -13,9 +13,9 @@ const montserrat = Montserrat({
 const raleway = Raleway({ subsets: ['vietnamese'], variable: '--font-raleway' });
 
 export const metadata: Metadata = {
-  title: 'FluentPal - Giao tiếp tiếng Anh thành thạo sau 3 tháng với gia sư AI',
+  title: 'FluentPal - Revolutionize your language learning with AI',  
   description:
-    'Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày',
+    `FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal.`,
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>
-          FluentPal - Giao tiếp tiếng Anh thành thạo sau 3 tháng với gia sư AI
+          FluentPal - Language Learning with AI
         </title>
         <noscript>
           <img
@@ -37,9 +37,14 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=608504484568454&ev=PageView&noscript=1"
           />
         </noscript>
+        <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
+        <meta name="description" content="FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal." />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+
         <meta
           name="keywords"
-          content="Ứng dụng AI tạo môi trường thực hành nói và giao tiếp tiếng Anh thành thạo chỉ cần 30 phút mỗi ngày"
+          content="english, chinese, speaking, education, korean, japanase, languagelearning, spanish, dutch, french"
         ></meta>
         <meta
           property="fb:page_id"
