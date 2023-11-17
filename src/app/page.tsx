@@ -97,7 +97,7 @@ export default function Home() {
       style={{ backgroundImage: 'url(/noise.png)' }}
     >
       <Section
-        outerClassName="bg-[#044BB7] h-[100vh]"
+        outerClassName="h-[100vh] bg-gradient-to-t to-[#044BB7] from-[#003B94]"
         innerClassName="flex flex-col !py-0 h-full"
       >
         <div className="flex justify-between py-[20px]">
@@ -141,7 +141,7 @@ export default function Home() {
                 Tải về
               </Button>
               <div className="text-white text-[14px]">
-                Ứng dụng có mặt tại AppStore và PlayStore
+                Ứng dụng có mặt tại <b>AppStore</b> và <b>PlayStore</b>
               </div>
             </div>
           </div>
@@ -178,8 +178,8 @@ export default function Home() {
             </p>
             <br />
             <p>
-              Hãy tạo cơ hội cho mình một lần nữa bằng cách tạo cho mình một môi
-              trường ngoại ngữ để mình có thể chủ động giao tiếp ngoại ngữ bất
+              FluentPal giúp bạn học ngoại ngữ bằng cách tạo ra một môi
+              trường ngoại ngữ để bạn có thể chủ động sử dụng giọng nói của bạn để giao tiếp ngoại ngữ bất
               cứ khi nào. Bạn càng chủ động học giao tiếp càng sớm thì bạn không
               chỉ giao tiếp một cách lưu loát hơn mà phát âm của bạn cũng chính
               xác hơn.
@@ -197,7 +197,7 @@ export default function Home() {
         />
         <div id="languages">
           <div className="my-[20px]">
-            FluentPal sẽ trò chuyện và hướng dẫn bạn học những ngôn ngữ sau:
+            FluentPal sẽ hướng dẫn và trò chuyện với bạn để giúp bạn học những ngôn ngữ sau:
           </div>
           {[
             ['🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Tiếng Anh'],
@@ -238,7 +238,7 @@ export default function Home() {
         <Title>Tất cả những gì bạn cần để học ngoại ngữ!</Title>
         <Feature
           title="Tham gia vào các tình huống nhập vai"
-          description="Trò chuyện với các nhân vật trong FluentPal cũng giống như là bạn đang nói chuyện với người thật. FluentPal đã được trau dồi thông qua hàng trăm ngàn cuộc trò chuyện để hiểu được bạn đang nói gì và biết cách phản hồi một cách tự nhiên nhất."
+          description="Bạn sẽ được tham gia và các tình huống giao tiếp ngoại ngữ hàng ngày. Qua đó, bạn không chỉ rèn luyện kỹ năng ngôn ngữ, mà còn phát triển khả năng tư duy, sự sáng tạo và kỹ năng xử lý tình huống."
           media={
             <img
               src="/features/roleplay.jpg"
@@ -335,7 +335,7 @@ export default function Home() {
           Tải ứng dụng và bắt đầu giao tiếp như người bản xứ
         </Title>
         <div className="text-center">
-          Ứng dụng FluentPal hiện có mặt tại AppStore và PlayStore
+          Ứng dụng hiện có mặt tại AppStore và PlayStore
         </div>
         <StoreDownload />
       </Section>

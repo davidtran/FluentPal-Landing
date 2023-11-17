@@ -21,8 +21,8 @@ export const Benefit = () => (
     {[
       {
         icon: '/power.svg',
-        title: 'AI thông minh',
-        desc: 'Trò chuyện với các nhân vật trong FluentPal cũng giống như là bạn đang nói chuyện với người thật. FluentPal đã được trau dồi thông qua hàng trăm ngàn cuộc trò chuyện để hiểu được bạn đang nói gì và biết cách phản hồi một cách tự nhiên nhất.',
+        title: 'Giao tiếp như người thật',
+        desc: 'Trò chuyện với các nhân vật trong FluentPal cũng giống như là bạn đang nói chuyện với người thật. AI của FluentPal có được nhờ quá trình học tập hàng trăm ngàn cuộc hội thoại của người bản xứ, do vậy FluentPal sẽ mang đến cho bạn trải nghiệm học thực tế nhất.',
       },
       {
         icon: '/redudant.svg',
@@ -37,7 +37,7 @@ export const Benefit = () => (
       {
         icon: '/stair.svg',
         title: 'Thân thiện với người mới',
-        desc: 'Chỉ với 499k cho gói vĩnh viễn, FluentPal luôn sẵn sàng để học ngoại ngữ cùng bạn bất cứ đâu và bất kỳ khi nào.',
+        desc: 'Ứng dụng chú trọng đến việc tạo ra một môi trường học ngoại ngữ đơn giản và hiệu quả, để bạn cảm thấy thoải mái và tự tin khi bắt đầu hành trình ngoại ngữ của mình.',
       },
     ].map((item, index) => (
       <BenefitItem
