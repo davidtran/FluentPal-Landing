@@ -23,7 +23,7 @@ export const StoreDownload = () => {
         >
           <img src={item.icon} />
           <div className="flex-col -gap-[1px]">
-            <div className="font-light text-[#515151] text-[12px] -mb-[2px]">
+            <div className="md:block hidden font-light text-[#515151] text-[12px] -mb-[2px]">
               {t('download.download_from')}
             </div>
             <div className="font-bold">{item.name}</div>

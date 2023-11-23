@@ -260,12 +260,9 @@ export default function Home() {
         <StoreDownload />
       </Section>
       <Section>
-        <div className="flex justify-between items-start">
+        <div className="flex-col md:flex-row gap-[20px] flex justify-between items-start">
           <AppLogo />
-          <div>
-            <div className="font-title font-bold mb-[10px]">
-              {t('support.title')}
-            </div>
+          <div>            
             <div className="font-body flex flex-col gap-2">
               <div className="flex gap-2">
                 <img
