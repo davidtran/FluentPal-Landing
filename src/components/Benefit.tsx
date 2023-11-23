@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 interface IProp {
   icon: string;
   title: string;
@@ -16,34 +18,37 @@ const BenefitItem: React.FC<IProp> = ({ icon, title, desc }) => {
   );
 };
 
-export const Benefit = () => (
-  <div className="flex flex-col md:flex-row justify-start flex-wrap mt-[40px]">
-    {[
-      {
-        icon: '/power.svg',
-        title: 'Giao tiếp như người thật',
-        desc: 'Trò chuyện với các nhân vật trong FluentPal cũng giống như là bạn đang nói chuyện với người thật. AI của FluentPal có được nhờ quá trình học tập hàng trăm ngàn cuộc hội thoại của người bản xứ, do vậy FluentPal sẽ mang đến cho bạn trải nghiệm học thực tế nhất.',
-      },
-      {
-        icon: '/redudant.svg',
-        title: 'Bài học phong phú',
-        desc: 'FluentPal cung cấp một loạt bài tập giao tiếp đa dạng, mỗi bài tập là một cơ hội để bạn thực hành và nâng cao khả năng ngôn ngữ của mình.',
-      },
-      {
-        icon: '/money.svg',
-        title: 'Chi phí tiết kiệm',
-        desc: 'Chỉ với 499k cho gói vĩnh viễn, FluentPal luôn sẵn sàng để học ngoại ngữ cùng bạn bất cứ đâu và bất kỳ khi nào.',
-      },
-      {
-        icon: '/stair.svg',
-        title: 'Thân thiện với người mới',
-        desc: 'Ứng dụng chú trọng đến việc tạo ra một môi trường học ngoại ngữ đơn giản và hiệu quả, để bạn cảm thấy thoải mái và tự tin khi bắt đầu hành trình ngoại ngữ của mình.',
-      },
-    ].map((item, index) => (
-      <BenefitItem
-        {...item}
-        key={index}
-      />
-    ))}
-  </div>
-);
+export const Benefit = () => {
+  const t = useTranslations('home')
+  return (
+    <div className="flex flex-col md:flex-row justify-start flex-wrap mt-[40px]">
+      {[
+        {
+          icon: '/power.svg',
+          title: t('benefits.item1'),
+          desc: t('benefits.item1_desc'),
+        },
+        {
+          icon: '/redudant.svg',
+          title: t('benefits.item2'),
+          desc: t('benefits.item2_desc'),
+        },
+        {
+          icon: '/money.svg',
+          title: t('benefits.item3'),
+          desc: t('benefits.item3_desc'),
+        },
+        {
+          icon: '/stair.svg',
+          title: t('benefits.item4'),
+          desc: t('benefits.item4_desc'),
+        },
+      ].map((item, index) => (
+        <BenefitItem
+          {...item}
+          key={index}
+        />
+      ))}
+    </div>
+  );
+}

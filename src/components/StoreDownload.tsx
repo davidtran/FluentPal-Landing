@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export const StoreDownload = () => {
+  const t = useTranslations('home');
   return (
     <div className="flex gap-[10px] md:gap-[20px] justify-center mt-[40px]">
       {[
@@ -21,7 +24,7 @@ export const StoreDownload = () => {
           <img src={item.icon} />
           <div className="flex-col -gap-[1px]">
             <div className="font-light text-[#515151] text-[12px] -mb-[2px]">
-              Tải về từ
+              {t('download.download_from')}
             </div>
             <div className="font-bold">{item.name}</div>
           </div>
