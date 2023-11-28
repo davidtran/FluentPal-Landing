@@ -132,17 +132,7 @@ export default function Home() {
               {t('hero.description')}
             </div>
             <div className="flex flex-col items-center md:items-start">
-              <Button
-                href={'/en/download'}
-                className="center my-[20px] px-[40px] py-[15px] shadow-sm text-black bg-white rounded-[15px] font-bold mb-[15px]"
-              >
-                {t('hero.tap_future')}
-              </Button>
-              <div className="text-white text-[14px]">
-                {t.rich('hero.download_desc', {
-                  strong: (chunk) => <b>{chunk}</b>,
-                })}
-              </div>
+              <StoreDownload />              
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center relative">

@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 export const StoreDownload = () => {
   const t = useTranslations('home');
   return (
-    <div className="flex gap-[10px] md:gap-[20px] justify-center mt-[40px]">
+    <div className="flex gap-[10px] md:gap-[20px] justify-center mt-[20px]">
       {[
         {
           icon: 'apple.svg',
