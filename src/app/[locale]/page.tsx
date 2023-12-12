@@ -244,6 +244,25 @@ export default function Home() {
             />
           ))}
       </Section>
+      <Section outerClassName="bg-[#fff] border-t-[1px] border-b-[1px]">
+        <Title className="text-center">{t('review.title')}</Title>
+        <div className="text-center">{t('review.description')}</div>        
+        <div className='columns-2 md:columns-3 gap-[10px] mt-[40px]'>
+        {[
+          'reddit1.png',
+          'reddit2.png',
+          '1.jpg',
+          '5.jpg',
+          '8.jpg',
+          '3.jpg',
+          '4.jpg',          
+          '6.jpg',
+          '7.jpg',
+        ].map((name, index) => {
+          return <img key={name} src={`/reviews/${name}`} className='border-[1px] border-[#e1e1e1] w-full shadow-sm rounded-[5px] mb-[10px]'/>
+        })}
+        </div>
+      </Section>
       <Section outerClassName="bg-[#C8DEFF] border-t-[1px] border-b-[1px]">
         <Title className="text-center">{t('download.title')}</Title>
         <div className="text-center">{t('download.desc')}</div>

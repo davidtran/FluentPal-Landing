@@ -63,8 +63,12 @@ export default {
     },
     support: {
       title: 'Liên hệ',
-      email: 'support@fluentpal.app',
+      email: 'nam.trankhanh.vn@gmail.com',
       reddit: 'FluentPal on Reddit',       
+    },
+    review: {
+      title: 'Tình cảm của người sử dụng',
+      description: 'Được phát triển từ tháng 8 năm 2023, FluentPal đã nhanh chóng nhận được sự hưởng ứng của người dùng và là sản phẩm không thể thiếu đối với người học ngoại ngữ.'
     }
   },
 };

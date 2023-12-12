@@ -65,6 +65,10 @@ export default {
       title: 'Contact',
       email: 'support@fluentpal.app',
       reddit: 'FluentPal on Reddit',       
+    },
+    review: {
+      title: 'Loves from customers!',
+      description: 'Developed since August 2023, FluentPal quickly gained user support and has become an essential product for language learners.'
     }
   },
 };
