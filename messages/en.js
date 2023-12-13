@@ -25,7 +25,7 @@ export default {
       korean: 'Korean',
       spanish: 'Spanish',
       french: 'French',
-      germany: 'Dustch'
+      germany: 'Deutsch'
     },
     benefits: {
       title: 'Benefits',
