@@ -34,7 +34,7 @@ export default {
       item2: 'BÀI HỌC PHONG PHÚ',
       item2_desc: 'FluentPal cung cấp một loạt bài tập giao tiếp đa dạng, mỗi bài tập là một cơ hội để bạn thực hành và nâng cao khả năng ngôn ngữ của mình.',
       item3: 'CHI PHÍ TIẾT KIỆM',
-      item3_desc: 'Chỉ với 599k cho gói vĩnh viễn, FluentPal luôn sẵn sàng để học ngoại ngữ cùng bạn bất cứ đâu và bất kỳ khi nào. Ngoài ra khi mua gói vĩnh viễn, bạn sẽ nhận được hỗ trợ và nâng cấp các tính năng mới trọn đời.',
+      item3_desc: 'Chỉ với 99k/tháng hoặc 990k cho gói vĩnh viễn, FluentPal luôn sẵn sàng để học ngoại ngữ cùng bạn bất cứ đâu và bất kỳ khi nào. Ngoài ra khi mua gói vĩnh viễn, bạn sẽ nhận được hỗ trợ và nâng cấp các tính năng mới trọn đời.',
       item4: 'THÂN THIỆN VỚI NGƯỜI MỚI',
       item4_desc: 'Ứng dụng chú trọng đến việc tạo ra một môi trường học ngoại ngữ đơn giản và hiệu quả, để bạn cảm thấy thoải mái và tự tin khi bắt đầu hành trình ngoại ngữ của mình.',      
     },
