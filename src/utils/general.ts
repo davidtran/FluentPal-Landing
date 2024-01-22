@@ -1,6 +1,5 @@
 const getMobileOS = (navigator: Navigator) => {
-  const ua = navigator.userAgent;
-  console.log(ua);
+  const ua = navigator.userAgent;  
   if (/android/i.test(ua)) {
     return 'Android';
   } else if (/iPad|iPhone|iPod|Macintosh/.test(ua)) {

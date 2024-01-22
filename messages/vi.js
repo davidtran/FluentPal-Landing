@@ -69,6 +69,13 @@ export default {
     review: {
       title: 'Tình cảm của người sử dụng',
       description: 'Được phát triển từ tháng 8 năm 2023, FluentPal đã nhanh chóng nhận được sự hưởng ứng của người dùng và là sản phẩm không thể thiếu đối với người học ngoại ngữ.'
-    }
+    },    
   },
+  replay: {
+    listening_to: 'Lắng nghe cuộc trò chuyện của {username}',
+    start: 'Bắt đầu',
+    replay_not_found: 'Không tìm thấy cuộc trò chuyện hoặc URL không đúng',
+    ended: 'Đã hết',
+    download: '👉 Tải về FluentPal',   
+  }
 };

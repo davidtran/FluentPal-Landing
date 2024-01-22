@@ -4,10 +4,11 @@ import { useEffect } from 'react';
 import Lottie, { AnimationItem } from 'lottie-web';
 import loadingJson from '@/assets/loading.json';
 import { getDownloadLink } from '@/utils/general';
+import { useLocale } from 'next-intl';
 
 
 export default function Page() {
-
+  const locale = useLocale();
   useEffect(() => {
     const container = document.querySelector('#animation');
     let instance: AnimationItem | null = null;

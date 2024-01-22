@@ -5,8 +5,9 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { Montserrat, Raleway } from 'next/font/google';
 import cls from 'classnames';
-import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
-import {notFound} from 'next/navigation';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 const locales = ['en', 'vi'];
 
@@ -14,27 +15,27 @@ const montserrat = Montserrat({
   subsets: ['vietnamese'],
   variable: '--font-montserrat',
 });
-const raleway = Raleway({ subsets: ['vietnamese'], variable: '--font-raleway' });
+const raleway = Raleway({
+  subsets: ['vietnamese'],
+  variable: '--font-raleway',
+});
 
 export const metadata: Metadata = {
-  title: 'FluentPal - Revolutionize your language learning with AI',  
-  description:
-    `FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal.`,
+  title: 'FluentPal - Revolutionize your language learning with AI',
+  description: `FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal.`,
 };
 
-type Props = { 
+type Props = {
   children: React.ReactNode;
-  params: {locale: string};
-}
+  params: { locale: string };
+};
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
+  return locales.map((locale) => ({ locale }));
 }
 
-export default function RootLayout({
-  children,  
-  params: { locale }
-}: Props) {
+export default function RootLayout({ children, params: { locale } }: Props) {
+  const messages = useMessages();
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
@@ -43,9 +44,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        <title>
-          FluentPal - Language Learning with AI
-        </title>
+        <title>FluentPal - Language Learning with AI</title>
         <noscript>
           <img
             height="1"
@@ -54,10 +53,20 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=608504484568454&ev=PageView&noscript=1"
           />
         </noscript>
-        <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
-        <meta name="description" content="FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal." />
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-
+        <link
+          rel="icon"
+          href="favicon.png"
+          type="image/png"
+          sizes="32x32"
+        />
+        <meta
+          name="description"
+          content="FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal."
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, minimum-scale=1.0"
+        />
 
         <meta
           name="keywords"
@@ -96,7 +105,12 @@ fbq('track', 'PageView');
 `}</Script>
 
       <body className={cls(montserrat.variable, raleway.variable)}>
-        {children}
+        <NextIntlClientProvider
+          messages={messages}
+          locale={locale}
+        >
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

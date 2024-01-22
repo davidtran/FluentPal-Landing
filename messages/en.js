@@ -71,4 +71,11 @@ export default {
       description: 'Developed since August 2023, FluentPal quickly gained user support and has become an essential product for language learners.'
     }
   },
+  replay: {
+    listening_to: 'Listening to {username}\'s conversation',
+    start: 'Start',
+    replay_not_found: 'Replay not found or incorrect URL',
+    ended: 'Ended',
+    download: 'Get FluentPal 📱',   
+  }
 };
