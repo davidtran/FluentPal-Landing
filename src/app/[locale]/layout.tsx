@@ -34,8 +34,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function RootLayout({ children, params: { locale } }: Props) {
-  const messages = useMessages();
+export default function RootLayout({ children, params: { locale } }: Props) {  
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
@@ -105,12 +104,9 @@ fbq('track', 'PageView');
 `}</Script>
 
       <body className={cls(montserrat.variable, raleway.variable)}>
-        <NextIntlClientProvider
-          messages={messages}
-          locale={locale}
-        >
+        
           {children}
-        </NextIntlClientProvider>
+        
       </body>
     </html>
   );

@@ -76,6 +76,6 @@ export default {
     start: 'Bắt đầu',
     replay_not_found: 'Không tìm thấy cuộc trò chuyện hoặc URL không đúng',
     ended: 'Đã hết',
-    download: '👉 Tải về FluentPal',   
+    download: 'Tải FluentPal 📱',   
   }
 };
