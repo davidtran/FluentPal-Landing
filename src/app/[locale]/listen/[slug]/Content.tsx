@@ -1,5 +1,5 @@
-'use client'
-  
+'use client';
+
 import { Center } from '@/components/Center';
 import { Loader } from '@/components/Loader';
 import axios from 'axios';
@@ -21,6 +21,8 @@ export const Content = () => {
   const [replayIndex, setReplayIndex] = useState(0);
   const [isReplayEnded, setIsReplayEnded] = useState(false);
   const replayIndexRef = useRef(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const audio = useRef<HTMLAudioElement>();
 
   useEffect(() => {
@@ -44,6 +46,7 @@ export const Content = () => {
   }
 
   function startReplay() {
+    setIsPlaying(true);
     setReplayIndex(0);
     setIsStarted(true);
     replayIndexRef.current = 0;
@@ -55,7 +58,7 @@ export const Content = () => {
   function onAudioEnd() {
     const nextIndex = replayIndexRef.current + 1;
 
-    if (nextIndex === replay.messages.length - 1) {
+    if (nextIndex === replay.messages.length) {
       setIsReplayEnded(true);
       return;
     }
@@ -72,14 +75,25 @@ export const Content = () => {
       }, 300);
     } else {
       setTimeout(() => {
+        replayIndexRef.current = nextIndex;
+        setReplayIndex(nextIndex);
         onAudioEnd();
       }, 1000);
     }
   }
 
+  function togglePlayPause() {
+    if (isPlaying) {
+      audio.current?.pause();
+    } else {
+      audio.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  }
+
   return (
     <>
-      <div className="relative mx-auto max-w-[90%] w-[600px] flex-1 bg-white p-[20px] rounded-[20px] shadow-sm overflow-scroll">
+      <div className="relative mx-auto max-w-[90%] w-[600px] flex-1 bg-white p-[15px] rounded-[20px] shadow-sm overflow-scroll">
         {isLoading && (
           <Center>
             <Loader />
@@ -160,16 +174,33 @@ export const Content = () => {
                 ))}
             </div>
             {isReplayEnded && (
-              <div className="font-bold text-center pt-[10px] text-[#747474] underline text-[12px]">
+              <div className="font-bold text-center pt-[10px] text-[#747474] text-[12px]">
                 {t('ended')}
               </div>
+            )}
+          </div>
+        )}
+        {!isReplayEnded && isStarted && (
+          <div onClick={togglePlayPause} className="fixed bg-[rgba(255,255,255,0.4)] w-[50px] h-[50px] border-[#C3C3C3] border-[1px] shadow-md rounded-full flex justify-center items-center bottom-[55px] z-[9999] cursor-pointer left-1/2 -translate-x-1/2">
+            {!isPlaying ? (
+              <img
+                src="/play.svg"
+                width={14}
+                height={14}
+              />
+            ) : (
+              <img
+                src="/pause.svg"
+                width={14}
+                height={14}
+              />
             )}
           </div>
         )}
       </div>
       <Link
         href={`/${locale}/download`}
-        className="text-[14px] text-center text-[#fff] mt-[10px] cursor-pointer"
+        className="text-[14px] text-center text-[#fff] mt-[10px] cursor-pointer underline underline-offset-1 tracking-wide"
       >
         {t('download')}
       </Link>

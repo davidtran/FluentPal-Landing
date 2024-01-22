@@ -9,7 +9,7 @@ export default function Page() {
       messages={messages}
       locale={locale}
     >
-      <div className="m-auto bg-[#032068] py-[10px] h-[100vh] flex flex-col">
+      <div className="m-auto bg-[#032068] py-[10px] h-[100dvh] flex flex-col">
         <Content />
       </div>
     </NextIntlClientProvider>
