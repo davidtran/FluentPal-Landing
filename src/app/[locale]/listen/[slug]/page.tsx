@@ -1,9 +1,18 @@
 import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl';
 import { Content } from './Content';
+import { Metadata } from 'next';
 
-export default function Page() {
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {  
+  return {
+    title: 'FluentPal replay',
+    description: 'Listen to a playback of a conversation on FluentPal',
+  };
+}
+
+export default function Page({ params: { slug } }: { params: { slug: string }}) {
   const locale = useLocale();
-  const messages = useMessages();
+  const messages = useMessages();  
   return (
     <NextIntlClientProvider
       messages={messages}

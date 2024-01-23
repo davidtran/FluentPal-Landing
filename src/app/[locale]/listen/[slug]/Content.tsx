@@ -22,7 +22,7 @@ export const Content = () => {
   const [isReplayEnded, setIsReplayEnded] = useState(false);
   const replayIndexRef = useRef(0);
   const [isPlaying, setIsPlaying] = useState(false);
-
+  const containerRef = useRef<HTMLDivElement>(null);
   const audio = useRef<HTMLAudioElement>();
 
   useEffect(() => {
@@ -72,14 +72,32 @@ export const Content = () => {
         audio.current = new Audio(replay.messages[nextIndex].sound_uri);
         audio.current.play();
         audio.current.addEventListener('ended', onAudioEnd);
+        setTimeout(() => {
+          //containerRef.current?.scrollTo({ top: containerRef.current.clientHeight - containerRef.current.scrollTop })
+          if (containerRef.current) {
+          containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        }
+        }, 50);
+        
       }, 300);
     } else {
       setTimeout(() => {
         replayIndexRef.current = nextIndex;
         setReplayIndex(nextIndex);
+        setTimeout(() => {
+          //containerRef.current?.scrollTo({ top: containerRef.current.clientHeight - containerRef.current.scrollTop })
+          if (containerRef.current) {
+          containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        }
+        }, 50);
+        
         onAudioEnd();
+
       }, 1000);
     }
+    
+    
+    
   }
 
   function togglePlayPause() {
@@ -93,7 +111,7 @@ export const Content = () => {
 
   return (
     <>
-      <div className="relative mx-auto max-w-[90%] w-[600px] flex-1 bg-white p-[15px] rounded-[20px] shadow-sm overflow-scroll">
+      <div ref={containerRef} id="container" className="relative mx-auto max-w-[90%] w-[600px] flex-1 bg-white p-[15px] rounded-[20px] shadow-sm overflow-scroll">
         {isLoading && (
           <Center>
             <Loader />
@@ -143,7 +161,7 @@ export const Content = () => {
                     <div
                       className={classNames(
                         'flex flex-col',
-                        index % 2 === 0 && 'self-end'
+                        index % 2 !== 0 && 'self-end'
                       )}
                     >
                       <div
