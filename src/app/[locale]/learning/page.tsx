@@ -6,6 +6,7 @@ import MarkdownPreview from '@uiw/react-markdown-preview';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Loader } from '@/components/Loader';
+import { Center } from '@/components/Center';
 
 async function getData(id: string, language: string) {
   const client = axios.create({
@@ -39,7 +40,11 @@ export default function Page() {
   }
 
   return <div>    
-    {!content && <Loader />}
+    {!content && (
+      <Center>
+        <Loader />
+      </Center>
+    )}
     {content && (
       <MarkdownPreview source={content} />
     )}
