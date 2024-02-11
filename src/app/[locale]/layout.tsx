@@ -1,4 +1,4 @@
-import '../globals.css';
+import '../globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
@@ -34,7 +34,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function RootLayout({ children, params: { locale } }: Props) {  
+export default function RootLayout({ children, params: { locale } }: Props) {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
@@ -104,9 +104,7 @@ fbq('track', 'PageView');
 `}</Script>
 
       <body className={cls(montserrat.variable, raleway.variable)}>
-        
-          {children}
-        
+        {children}
       </body>
     </html>
   );
