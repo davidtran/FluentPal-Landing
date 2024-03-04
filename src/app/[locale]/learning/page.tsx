@@ -35,8 +35,18 @@ export default function Page() {
     const language = params.get('language');
     if (id && language) {
       const content = await getData(id, language);
-      setContent(content);
+      setContent(removeMarkdownTags(content));
     }
+  }
+
+  function removeMarkdownTags(str: string) {
+    const startTag = '```markdown';
+    const endTag = '```';
+    if (str.startsWith(startTag) && str.endsWith(endTag)) {
+      str = str.slice(startTag.length);
+      str = str.slice(0, -endTag.length);
+    }
+    return str.trim();
   }
 
   return <div>    
