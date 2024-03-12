@@ -54,7 +54,9 @@ export default {
       item6: 'Sửa lỗi',
       item6_desc: 'FluentPal đưa ra gợi ý để bạn có thể trò chuyện hay hơn trong từng tình huống',
       item7: 'Lựa chọn cấp độ của AI',
-      item7_desc: 'Có 3 cấp độ trò chuyện khác nhau để bạn lựa chọn là "Mới bắt đầu", "Nâng cao" và "IELTS" (chỉ dành cho tiếng Anh)'
+      item7_desc: 'Có 3 cấp độ trò chuyện khác nhau để bạn lựa chọn là "Mới bắt đầu", "Nâng cao" và "IELTS" (chỉ dành cho tiếng Anh)',
+      item8: 'Bài học cho người mới bắt đầu',
+      item8_desc: '90 bài học kỹ năng giao tiếp cơ bản cho người mới bắt đầu'
     },
     download: {
       title: 'Tải ứng dụng và bắt đầu giao tiếp như người bản xứ',

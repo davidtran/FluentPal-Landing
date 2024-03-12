@@ -172,7 +172,7 @@ export const Content = () => {
                           }
                         )}
                       >
-                        {index % 2 === 0 ? replay.ai_name : replay.username}
+                        {item.name || index % 2 === 0 ? replay.ai_name : replay.username}                        
                       </div>
                       <div
                         className={classNames(

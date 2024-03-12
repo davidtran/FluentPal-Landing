@@ -215,11 +215,11 @@ export default function Home() {
           text={t('features.title')}
         />
 
-        <Title>{t('features.description')}</Title>
-        {Array(7)
-          .fill(1)
-          .map((_, index) => {
-            const number = index + 1;
+        <Title>{t('features.description')}</Title>        
+        {[
+          1,2,8,3,4,5,6,7
+        ]
+          .map((number, index) => {            
             return {
               image: `/features/${number}.jpg`,
               title: t('features.item' + number),
@@ -247,21 +247,40 @@ export default function Home() {
       <Section outerClassName="bg-[#fff] border-t-[1px] border-b-[1px]">
         <Title className="text-center">{t('review.title')}</Title>
         <div className="text-center">{t('review.description')}</div>        
-        <div className='columns-2 md:columns-3 gap-[10px] mt-[40px]'>
+        <div className='grid md:grid-cols-3 grid-cols-2 gap-[10px] mt-[40px]'>
+       
         {[
+          {
+            type: 'video',
+            content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/xxn3AwpBlGE?si=fhc-hU9MoD4WRSh0&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          },
           '9.jpg',
           'reddit1.png',
           'reddit2.png',
           '1.jpg',
-          '5.jpg',
+          '5.jpg',          
           '8.jpg',
           '3.jpg',
           '4.jpg',          
+          {
+            type: 'tiktok',
+            content: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kiara.yuhe/video/7345096077265194247" data-video-id="7345096077265194247" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@kiara.yuhe" href="https://www.tiktok.com/@kiara.yuhe?refer=embed">@kiara.yuhe</a> Luyện nói tiếng Trung với AI của FluentPal🇨🇳 hiểu biết sâu, đối thoại mượt mà, tinh tế 💯<a title="hoctiengtrung" target="_blank" href="https://www.tiktok.com/tag/hoctiengtrung?refer=embed">#hoctiengtrung</a> <a title="duhoctrungquoc" target="_blank" href="https://www.tiktok.com/tag/duhoctrungquoc?refer=embed">#duhoctrungquoc</a> <a title="fluentpal" target="_blank" href="https://www.tiktok.com/tag/fluentpal?refer=embed">#fluentpal</a> <a title="tiengtrung" target="_blank" href="https://www.tiktok.com/tag/tiengtrung?refer=embed">#tiengtrung</a> <a title="hakiara" target="_blank" href="https://www.tiktok.com/tag/hakiara?refer=embed">#hakiara</a> <a target="_blank" title="♬ original sound  - Hà Kiara" href="https://www.tiktok.com/music/original-sound-Hà-Kiara-7345096392137673473?refer=embed">♬ original sound  - Hà Kiara</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>`
+          },
           '6.jpg',
           '7.jpg',          
-          '10.jpg'
+          '10.jpg',
+          {
+            type: 'video',
+            content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/YD5dV0EgWU0?si=cSQsKKUjCUlRuN7_&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          }
         ].map((name, index) => {
-          return <img key={name} src={`/reviews/${name}`} className='border-[1px] border-[#e1e1e1] w-full shadow-sm rounded-[5px] mb-[10px]'/>
+          if (typeof (name) === 'string') {
+            return <img key={name} src={`/reviews/${name}`} className='border-[1px] border-[#e1e1e1] w-full shadow-sm rounded-[5px] mb-[10px]'/>
+          } else {
+            return <div className='col-span-2 flex justify-center items-center border-[1px] border-[#e1e1e1]' dangerouslySetInnerHTML={{ __html: name.content}}>              
+              </div>
+          }
+          
         })}
         </div>
       </Section>
@@ -294,16 +313,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/profile.php?id=61550890358472">
                   Facebook
                 </a>
-              </div>
-              <div className="flex gap-2">
-                <img
-                  src="/reddit.svg"
-                  alt="reddit"
-                  width={22}
-                  height={22}
-                />
-                <a href="https://www.reddit.com/r/fluentpal/">Reddit</a>
-              </div>
+              </div>              
             </div>
           </div>
         </div>
