@@ -7,6 +7,7 @@ export default {
         tap_future: 'Bắt đầu hành trình của bạn',
         download: 'Bắt đầu',
       download_desc: 'Ứng dụng có mặt tại <strong>AppStore</strong> và <strong>PlayStore</strong>',
+      scan_qr: 'Quét mã QR để tải về'
     },
     
     introduction: {

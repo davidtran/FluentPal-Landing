@@ -132,7 +132,12 @@ export default function Home() {
               {t('hero.description')}
             </div>
             <div className="flex flex-col items-center md:items-start">
-              <StoreDownload />              
+              <StoreDownload />     
+              
+            </div>
+            <div className='hidden md:block'> 
+              <div className='font-body text-[16px] font-bold text-white mt-[15px] mb-[10px]'>{t('hero.scan_qr')}</div>         
+              <img src="/qr-code.png" className='w-[200px] h-[200px] rounded-md mt-[5]' />
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center relative">
@@ -288,6 +293,10 @@ export default function Home() {
         <Title className="text-center">{t('download.title')}</Title>
         <div className="text-center">{t('download.desc')}</div>
         <StoreDownload />
+        <div className='hidden md:flex flex-col items-center'> 
+              <div className='font-body text-[16px] font-bold text-black mt-[40px] mb-[10px]'>{t('hero.scan_qr')}</div>         
+              <img src="/qr-code.png" className='w-[200px] h-[200px] rounded-md mt-[5]' />
+            </div>
       </Section>
       <Section>
         <div className="flex-col md:flex-row gap-[20px] flex justify-between items-start">

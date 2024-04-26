@@ -8,6 +8,7 @@ export default {
       download: 'Start here',
       download_desc:
         'FluentPal is available on the <strong>AppStore</strong> and <strong>PlayStore</strong>',
+        scan_qr: 'Scan to download'
     },
 
     introduction: {

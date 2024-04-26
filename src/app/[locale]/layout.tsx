@@ -73,7 +73,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
         ></meta>
         <meta
           property="fb:page_id"
-          content="100092194243400"
+          content="61550890358472"
         ></meta>
       </Head>
       <Script

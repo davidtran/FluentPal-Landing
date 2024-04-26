@@ -1,6 +1,7 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export const StoreDownload = () => {
+  const locale = useLocale();
   const t = useTranslations('home');
   return (
     <div className="flex gap-[10px] md:gap-[20px] justify-center mt-[20px]">
@@ -8,12 +9,12 @@ export const StoreDownload = () => {
         {
           icon: 'apple.svg',
           name: 'AppStore',
-          href: 'https://apps.apple.com/us/app/fluentpal/id6462874346',
+          href: '/vi/download?platform=ios',
         },
         {
           icon: 'android.svg',
           name: 'PlayStore',
-          href: 'https://play.google.com/store/apps/details?id=com.fluentai',
+          href: '/vi/download?platform=android',
         },
       ].map((item) => (
         <a
