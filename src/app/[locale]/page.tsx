@@ -109,6 +109,7 @@ export default function Home() {
             <a href="#languages">{t('supported_languages.title')}</a>
             <a href="#benefits">{t('benefits.title')}</a>
             <a href="#features">{t('features.title')}</a>
+            <a href="https://discord.gg/4ZWFPFVUUw">{t('join_our_discord')}</a>
             <Button
               href={'/en/download'}
               className="px-[40px] py-[10px] shadow-sm text-black bg-white rounded-[15px] font-bold"
@@ -314,6 +315,17 @@ export default function Home() {
               </div>
               <div className="flex gap-2">
                 <img
+                  src="/discord.svg"
+                  alt="facebook"
+                  width={19}
+                  height={19}
+                />
+                <a href="https://discord.gg/4ZWFPFVUUw">
+                  Discord
+                </a>
+              </div>  
+              <div className="flex gap-2">
+                <img
                   src="/facebook.svg"
                   alt="facebook"
                   width={19}
@@ -327,6 +339,9 @@ export default function Home() {
           </div>
         </div>
       </Section>
+      <div className='shadow-[0px_-1px_10px_rgba(0,0,0,0.1)] fixed bottom-0 right-0 bg-[#fff] rounded-tl-[16px] text-black font-body font-bold px-[25px] py-[10px]'>
+        <a href="https://discord.gg/4ZWFPFVUUw" target="_blank">{t('join_our_discord')}</a>
+      </div>
     </main>
   );
 }

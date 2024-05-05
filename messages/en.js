@@ -1,5 +1,6 @@
 export default {
   home: {
+    join_our_discord: 'Join our Discord',
     hero: {
       title: 'Master Speaking A Foreign Language',
       description:
@@ -8,7 +9,7 @@ export default {
       download: 'Start here',
       download_desc:
         'FluentPal is available on the <strong>AppStore</strong> and <strong>PlayStore</strong>',
-        scan_qr: 'Scan to download'
+      scan_qr: 'Scan to download',
     },
 
     introduction: {
