@@ -40,7 +40,7 @@ export default {
         'FluentPal offers a variety of communication exercises, each one an opportunity for you to practice and improve your language skills.',
       item3: 'Cost-Effective',
       item3_desc:
-        'For just $4 a month or $41 for the lifetime package, FluentPal is always ready to learn a foreign language with you anywhere and anytime. Additionally, when purchasing the lifetime package, you will receive support and lifetime upgrades of new features.',
+        `FluentPal is available anytime, anywhere to help you learn a foreign language. It's 12 times cheaper than hiring a tutor and includes support and lifetime upgrades with new features when you opt for the lifetime package.`,
       item4: 'Beginner-Friendly',
       item4_desc:
         'The app focuses on creating a simple and effective foreign language learning environment, making you feel comfortable and confident as you begin your language learning journey.',
