@@ -3,7 +3,7 @@ import { Benefit } from '@/components/Benefit';
 import { Button } from '@/components/Button';
 import { StoreDownload } from '@/components/StoreDownload';
 import classNames from 'classnames';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const SectionTitle: React.FC<{ number: number; text: string }> = ({
   number,
@@ -90,6 +90,7 @@ const Feature: React.FC<{
 };
 
 export default function Home() {
+  const locale = useLocale();
   const t = useTranslations('home');
   return (
     <main
@@ -133,12 +134,16 @@ export default function Home() {
               {t('hero.description')}
             </div>
             <div className="flex flex-col items-center md:items-start">
-              <StoreDownload />     
-              
+              <StoreDownload />
             </div>
-            <div className='hidden md:block'> 
-              <div className='font-body text-[16px] font-bold text-white mt-[15px] mb-[10px]'>{t('hero.scan_qr')}</div>         
-              <img src="/qr-code.png" className='w-[200px] h-[200px] rounded-md mt-[5]' />
+            <div className="hidden md:block">
+              <div className="font-body text-[16px] font-bold text-white mt-[15px] mb-[10px]">
+                {t('hero.scan_qr')}
+              </div>
+              <img
+                src="/qr-code.png"
+                className="w-[200px] h-[200px] rounded-md mt-[5]"
+              />
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center relative">
@@ -221,11 +226,9 @@ export default function Home() {
           text={t('features.title')}
         />
 
-        <Title>{t('features.description')}</Title>        
-        {[
-          1,2,8,3,4,5,6,7
-        ]
-          .map((number, index) => {            
+        <Title>{t('features.description')}</Title>
+        {[1, 2, 8, 3, 4, 5, 6, 7]
+          .map((number, index) => {
             return {
               image: `/features/${number}.jpg`,
               title: t('features.item' + number),
@@ -252,95 +255,129 @@ export default function Home() {
       </Section>
       <Section outerClassName="bg-[#fff] border-t-[1px] border-b-[1px]">
         <Title className="text-center">{t('review.title')}</Title>
-        <div className="text-center">{t('review.description')}</div>        
-        <div className='grid md:grid-cols-3 grid-cols-2 gap-[10px] mt-[40px]'>
-       
-        {[
-          {
-            type: 'video',
-            content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/xxn3AwpBlGE?si=fhc-hU9MoD4WRSh0&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-          },
-          '9.jpg',
-          'reddit1.png',
-          'reddit2.png',
-          '1.jpg',
-          '5.jpg',          
-          '8.jpg',
-          '3.jpg',
-          '4.jpg',          
-          {
-            type: 'tiktok',
-            content: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kiara.yuhe/video/7345096077265194247" data-video-id="7345096077265194247" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@kiara.yuhe" href="https://www.tiktok.com/@kiara.yuhe?refer=embed">@kiara.yuhe</a> Luyện nói tiếng Trung với AI của FluentPal🇨🇳 hiểu biết sâu, đối thoại mượt mà, tinh tế 💯<a title="hoctiengtrung" target="_blank" href="https://www.tiktok.com/tag/hoctiengtrung?refer=embed">#hoctiengtrung</a> <a title="duhoctrungquoc" target="_blank" href="https://www.tiktok.com/tag/duhoctrungquoc?refer=embed">#duhoctrungquoc</a> <a title="fluentpal" target="_blank" href="https://www.tiktok.com/tag/fluentpal?refer=embed">#fluentpal</a> <a title="tiengtrung" target="_blank" href="https://www.tiktok.com/tag/tiengtrung?refer=embed">#tiengtrung</a> <a title="hakiara" target="_blank" href="https://www.tiktok.com/tag/hakiara?refer=embed">#hakiara</a> <a target="_blank" title="♬ original sound  - Hà Kiara" href="https://www.tiktok.com/music/original-sound-Hà-Kiara-7345096392137673473?refer=embed">♬ original sound  - Hà Kiara</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>`
-          },
-          '6.jpg',
-          '7.jpg',          
-          '10.jpg',
-          {
-            type: 'video',
-            content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/YD5dV0EgWU0?si=cSQsKKUjCUlRuN7_&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-          }
-        ].map((name, index) => {
-          if (typeof (name) === 'string') {
-            return <img key={name} src={`/reviews/${name}`} className='border-[1px] border-[#e1e1e1] w-full shadow-sm rounded-[5px] mb-[10px]'/>
-          } else {
-            return <div className='col-span-2 flex justify-center items-center border-[1px] border-[#e1e1e1]' dangerouslySetInnerHTML={{ __html: name.content}}>              
-              </div>
-          }
-          
-        })}
+        <div className="text-center">{t('review.description')}</div>
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] mt-[40px]">
+          {[
+            {
+              type: 'video',
+              content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/xxn3AwpBlGE?si=fhc-hU9MoD4WRSh0&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+            },
+            '9.jpg',
+            'reddit1.png',
+            'reddit2.png',
+            '1.jpg',
+            '5.jpg',
+            '8.jpg',
+            '3.jpg',
+            '4.jpg',
+            {
+              type: 'tiktok',
+              content: `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kiara.yuhe/video/7345096077265194247" data-video-id="7345096077265194247" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@kiara.yuhe" href="https://www.tiktok.com/@kiara.yuhe?refer=embed">@kiara.yuhe</a> Luyện nói tiếng Trung với AI của FluentPal🇨🇳 hiểu biết sâu, đối thoại mượt mà, tinh tế 💯<a title="hoctiengtrung" target="_blank" href="https://www.tiktok.com/tag/hoctiengtrung?refer=embed">#hoctiengtrung</a> <a title="duhoctrungquoc" target="_blank" href="https://www.tiktok.com/tag/duhoctrungquoc?refer=embed">#duhoctrungquoc</a> <a title="fluentpal" target="_blank" href="https://www.tiktok.com/tag/fluentpal?refer=embed">#fluentpal</a> <a title="tiengtrung" target="_blank" href="https://www.tiktok.com/tag/tiengtrung?refer=embed">#tiengtrung</a> <a title="hakiara" target="_blank" href="https://www.tiktok.com/tag/hakiara?refer=embed">#hakiara</a> <a target="_blank" title="♬ original sound  - Hà Kiara" href="https://www.tiktok.com/music/original-sound-Hà-Kiara-7345096392137673473?refer=embed">♬ original sound  - Hà Kiara</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>`,
+            },
+            '6.jpg',
+            '7.jpg',
+            '10.jpg',
+            {
+              type: 'video',
+              content: `<iframe width="560" height="315" src="https://www.youtube.com/embed/YD5dV0EgWU0?si=cSQsKKUjCUlRuN7_&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+            },
+          ].map((name, index) => {
+            if (typeof name === 'string') {
+              return (
+                <img
+                  key={name}
+                  src={`/reviews/${name}`}
+                  className="border-[1px] border-[#e1e1e1] w-full shadow-sm rounded-[5px] mb-[10px]"
+                />
+              );
+            } else {
+              return (
+                <div
+                  className="col-span-2 flex justify-center items-center border-[1px] border-[#e1e1e1]"
+                  dangerouslySetInnerHTML={{ __html: name.content }}
+                ></div>
+              );
+            }
+          })}
         </div>
       </Section>
       <Section outerClassName="bg-[#C8DEFF] border-t-[1px] border-b-[1px]">
         <Title className="text-center">{t('download.title')}</Title>
         <div className="text-center">{t('download.desc')}</div>
         <StoreDownload />
-        <div className='hidden md:flex flex-col items-center'> 
-              <div className='font-body text-[16px] font-bold text-black mt-[40px] mb-[10px]'>{t('hero.scan_qr')}</div>         
-              <img src="/qr-code.png" className='w-[200px] h-[200px] rounded-md mt-[5]' />
-            </div>
+        <div className="hidden md:flex flex-col items-center">
+          <div className="font-body text-[16px] font-bold text-black mt-[40px] mb-[10px]">
+            {t('hero.scan_qr')}
+          </div>
+          <img
+            src="/qr-code.png"
+            className="w-[200px] h-[200px] rounded-md mt-[5]"
+          />
+        </div>
       </Section>
       <Section>
         <div className="flex-col md:flex-row gap-[20px] flex justify-between items-start">
           <AppLogo />
-          <div>            
-            <div className="font-body flex flex-col gap-2">
-              <div className="flex gap-2">
-                <img
-                  src="/email.svg"
-                  alt="email"
-                  width={19}
-                  height={15}
-                />
-                <a href="mailto:fluentpal.app@gmail.com">fluentpal.app@gmail.com</a>
+          <div className="flex flex-col md:flex-row justify-end gap-[40px]">
+            <div>
+              <div className="font-body flex flex-col gap-2">
+                <div className="font-bold">Support</div>
+                <div className="flex gap-2">
+                  <img
+                    src="/email.svg"
+                    alt="email"
+                    width={19}
+                    height={15}
+                  />
+                  <a href="mailto:fluentpal.app@gmail.com">
+                    fluentpal.app@gmail.com
+                  </a>
+                </div>
+                <div className="flex gap-2">
+                  <img
+                    src="/discord.svg"
+                    alt="facebook"
+                    width={19}
+                    height={19}
+                  />
+                  <a href="https://discord.gg/4ZWFPFVUUw">Discord</a>
+                </div>
+                <div className="flex gap-2">
+                  <img
+                    src="/facebook.svg"
+                    alt="facebook"
+                    width={19}
+                    height={19}
+                  />
+                  <a href="https://www.facebook.com/profile.php?id=61550890358472">
+                    Facebook
+                  </a>
+                </div>
               </div>
-              <div className="flex gap-2">
-                <img
-                  src="/discord.svg"
-                  alt="facebook"
-                  width={19}
-                  height={19}
-                />
-                <a href="https://discord.gg/4ZWFPFVUUw">
-                  Discord
-                </a>
-              </div>  
-              <div className="flex gap-2">
-                <img
-                  src="/facebook.svg"
-                  alt="facebook"
-                  width={19}
-                  height={19}
-                />
-                <a href="https://www.facebook.com/profile.php?id=61550890358472">
-                  Facebook
-                </a>
-              </div>              
             </div>
+            {locale === 'en' && (
+              <div>
+                <div className="font-bold">Partners</div>
+                <div className="pt-[7px]">
+                  <a
+                    href="https://ourbabyai.com/"
+                    target="_blank"
+                  >
+                    See Your Future Baby
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </Section>
-      <div className='shadow-[0px_-1px_10px_rgba(0,0,0,0.1)] fixed bottom-0 right-0 bg-[#fff] rounded-tl-[16px] text-black font-body font-bold px-[25px] py-[10px]'>
-        <a href="https://discord.gg/4ZWFPFVUUw" target="_blank">{t('join_our_discord')}</a>
+      <div className="shadow-[0px_-1px_10px_rgba(0,0,0,0.1)] fixed bottom-0 right-0 bg-[#fff] rounded-tl-[16px] text-black font-body font-bold px-[25px] py-[10px]">
+        <a
+          href="https://discord.gg/4ZWFPFVUUw"
+          target="_blank"
+        >
+          {t('join_our_discord')}
+        </a>
       </div>
     </main>
   );
