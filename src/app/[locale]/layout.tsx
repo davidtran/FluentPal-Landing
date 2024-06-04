@@ -111,7 +111,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-Q6YQJ538P0"
       ></Script>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></Script>
+      <Script crossOrigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></Script>
       <Script>{`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
