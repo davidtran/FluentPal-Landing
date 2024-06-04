@@ -133,11 +133,6 @@ fbq('track', 'PageView');
 
 <!-- End Meta Pixel Code -->
 `}</Script>
-<Script>
-  {`smartbanner.publish();
-
-  `}
-</Script>
 
       <body className={cls(montserrat.variable, raleway.variable)}>
         {children}
