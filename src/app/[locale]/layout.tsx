@@ -8,6 +8,7 @@ import cls from 'classnames';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { getDownloadLink } from '@/utils/general';
 
 const locales = ['en', 'vi'];
 
@@ -21,8 +22,19 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: 'FluentPal - Revolutionize your language learning with AI',
-  description: `FluentPal: Revolutionize Your English with AI - FluentPal offers an innovative AI-driven platform designed to enhance your English speaking and communication skills. With just 30 minutes of daily practice, you can immerse yourself in a virtual environment tailored for effective language learning. Whether you're a beginner or looking to polish your fluency, FluentPal adapts to your level, providing personalized feedback and engaging interactive exercises. Experience a convenient and dynamic way to master English, anytime, anywhere with FluentPal.`,
+  title: 'FluentPal - Language Learning with AI',
+  description: `
+  FluentPal is your super-app for learning languages. Practice speaking with AI teachers who guide you in real-time, expand your vocabulary with interactive lessons, and improve your grammar with easy-to-follow exercises.`,
+  other: {
+    'smartbanner:title': 'FluentPal',
+    'smartbanner:author': 'David Tran',
+    'smartbanner:icon-apple': '/app-logo.jpg',
+    'smartbanner:icon-google': '/app-logo.jpg',
+    'smartbanner:button': 'Download',
+    'smartbanner:button-url-apple': getDownloadLink('en', 'ios'),
+    'smartbanner:button-url-google': getDownloadLink('en', 'android'),
+    "smartbanner:api": 'yes'
+  },
 };
 
 type Props = {
@@ -45,10 +57,13 @@ export default function RootLayout({ children, params: { locale } }: Props) {
       <Head>
         <title>FluentPal - Language Learning with AI</title>
 
-        <Script id="reddit-pixel">
-          {`!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_d8bnens');rdt('track', 'PageVisit');`}
-        </Script>
-
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/smartbanner.js/1.14.6/smartbanner.min.css"
+          integrity="sha512-Bd1kXxMw8vfqfyO49n0nPH912EBaCHxoXI1S91b3DpKYvnPY+RmjHuAm54YNN9pdyr1dfNlTVvg9IN61zCx9SQ=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <noscript>
           <img
             height="1"
@@ -81,6 +96,16 @@ export default function RootLayout({ children, params: { locale } }: Props) {
           content="61550890358472"
         ></meta>
       </Head>
+      <Script id="reddit-pixel">
+        {`!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_d8bnens');rdt('track', 'PageVisit');`}
+      </Script>
+      <Script
+        id="smart-banner-js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/smartbanner.js/1.14.6/smartbanner.min.js"
+        integrity="sha512-ynhSS9bKNh6kNmX2pWqADgibWNzx3OtvffV5re9fQGmF04m0xXeP0a2XkMxc1IHxcCxJoUaTinPswDgFdF3eQQ=="
+        crossOrigin="anonymous"
+        referrerPolicy="no-referrer"
+      />
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-Q6YQJ538P0"
@@ -107,6 +132,11 @@ fbq('track', 'PageView');
 
 <!-- End Meta Pixel Code -->
 `}</Script>
+<Script>
+  {`smartbanner.publish();
+
+  `}
+</Script>
 
       <body className={cls(montserrat.variable, raleway.variable)}>
         {children}

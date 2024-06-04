@@ -20,8 +20,14 @@ const downloadLinks: Record<any, any> = {
 }
 
 export function getDownloadLink(locale: string, os?: string) {
-  const browserOS = getMobileOS(navigator);
-  const osKey = os || browserOS;
+  let osKey = os;
+  if (!osKey) {
+    if (typeof navigator !== 'undefined') {
+      osKey = getMobileOS(navigator);
+    } else {
+      osKey = ''
+    }    
+  }  
   const localeKey = ['vi', 'en'].includes(locale) ? locale : 'en';
   return downloadLinks[osKey][localeKey];  
 }

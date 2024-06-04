@@ -23,7 +23,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-i18next": "^13.5.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "smartbanner.js": "^1.24.1"
   },
   "devDependencies": {
     "@types/node": "latest",
