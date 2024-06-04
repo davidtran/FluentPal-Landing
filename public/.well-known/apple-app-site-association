@@ -5,7 +5,8 @@
       {
         "appIDs": "W8455T9HYL.org.reactjs.native.example.FluentAI",
         "paths": [
-          "/link/*"
+          "/link/*",
+          "/en/link/*"
         ]
       }
     ]
