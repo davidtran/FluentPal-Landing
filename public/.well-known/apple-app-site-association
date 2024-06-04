@@ -1,19 +1,17 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appIDs": "W8455T9HYL.org.reactjs.native.example.FluentAI",
-        "paths": [
-          "/link/*",
-          "/en/link/*"
+        "appIDs": [
+          "W8455T9HYL.org.reactjs.native.example.FluentAI"
+        ],
+        "components": [
+          {
+            "/": "/upgrade/*",
+            "comment": "Matches any URL with a path that starts with /upgrade"
+          }
         ]
       }
-    ]
-  },
-  "activitycontinuation": {
-    "apps": [
-      "W8455T9HYL.org.reactjs.native.example.FluentAI"
     ]
   },
   "webcredentials": {
