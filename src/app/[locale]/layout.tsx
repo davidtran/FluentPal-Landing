@@ -33,7 +33,8 @@ export const metadata: Metadata = {
     'smartbanner:button': 'Download',
     'smartbanner:button-url-apple': getDownloadLink('en', 'ios'),
     'smartbanner:button-url-google': getDownloadLink('en', 'android'),
-    "smartbanner:api": 'yes'
+    "smartbanner:api": 'yes',
+    'apple-itunes-app': 'app-id=6462874346'
   },
 };
 

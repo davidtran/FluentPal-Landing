@@ -1,17 +1,18 @@
 {
   "applinks": {
+    "apps": [],
     "details": [
       {
-        "appIDs": [
-          "W8455T9HYL.org.reactjs.native.example.FluentAI"
-        ],
-        "components": [
-          {
-            "/": "/link/*",
-            "comment": "Matches any URL with a path that starts with /link/."
-          }
+        "appIDs": "W8455T9HYL.org.reactjs.native.example.FluentAI",
+        "paths": [
+          "/link/*"
         ]
       }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "W8455T9HYL.org.reactjs.native.example.FluentAI"
     ]
   },
   "webcredentials": {
