@@ -358,9 +358,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {locale === 'en' && (
+            
               <div>
                 <div className="font-bold">Partners</div>
+                <div className="pt-[7px]">
+                  <a
+                    href="https://dailydictation.com/"
+                    target="_blank"
+                  >
+                    English dictation exercises
+                  </a>
+                </div>
                 <div className="pt-[7px]">
                   <a
                     href="https://ourbabyai.com/"
@@ -370,7 +378,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            )}
+            
           </div>
         </div>
       </Section>
