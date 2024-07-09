@@ -1,60 +1,13 @@
 import { AppLogo } from '@/components/AppLogo';
 import { Benefit } from '@/components/Benefit';
-import { Button } from '@/components/Button';
+import Footer from '@/components/Footer';
+import { Section, SectionTitle, Title } from '@/components/Section';
 import { StoreDownload } from '@/components/StoreDownload';
+import TopNav from '@/components/TopNav';
 import classNames from 'classnames';
 import { useLocale, useTranslations } from 'next-intl';
 
-const SectionTitle: React.FC<{ number: number; text: string }> = ({
-  number,
-  text,
-}) => {
-  return (
-    <div className="inline-flex mb-[10px] self-start h-[34px] px-1 py-[5px] border-[1px] border-[#044BB7] rounded-[20px] text-[#044BB7] font-semibold">
-      <div className="px-[10px] border-r-[1px] border-r-[#044BB7] text-center ">
-        {number}
-      </div>
-      <div className="px-[10px]">{text}</div>
-    </div>
-  );
-};
 
-const Section: React.FC<{
-  id?: string;
-  children: React.ReactNode;
-  outerClassName?: string;
-  innerClassName?: string;
-}> = ({ id, children, outerClassName, innerClassName }) => {
-  return (
-    <div
-      id={id}
-      className={classNames('w-full', outerClassName)}
-    >
-      <div
-        className={classNames(
-          'w-[1000px] max-w-full mx-auto py-[40px] md:py-[80px] px-[20px] md:px-0',
-          innerClassName
-        )}
-      >
-        {children}
-      </div>
-    </div>
-  );
-};
-
-const Title: React.FC<{ children: React.ReactNode; className?: string }> = ({
-  children,
-  className,
-}) => (
-  <div
-    className={classNames(
-      'text-[#044BB7] text-[21px] md:text-[31px] font-title font-bold md:font-bold mb-[15px]',
-      className
-    )}
-  >
-    {children}
-  </div>
-);
 
 const Feature: React.FC<{
   title: string;
@@ -100,31 +53,8 @@ export default function Home() {
       <Section
         outerClassName="h-[100vh] bg-gradient-to-t to-[#044BB7] from-[#003B94]"
         innerClassName="flex flex-col !py-0 h-full"
-      >
-        <div className="flex justify-between py-[20px]">
-          <div className="flex gap-[10px] items-center">
-            <AppLogo className="text-white" />
-          </div>
-          <div className="justify-end items-center gap-[30px] text-white hidden md:flex">
-            <a href="#introduction">{t('introduction.introduction')}</a>
-            <a href="#languages">{t('supported_languages.title')}</a>
-            <a href="#benefits">{t('benefits.title')}</a>
-            <a href="#features">{t('features.title')}</a>
-            <a href="https://discord.gg/4ZWFPFVUUw">{t('join_our_discord')}</a>
-            <Button
-              href={'/en/download'}
-              className="px-[40px] py-[10px] shadow-sm text-black bg-white rounded-[15px] font-bold"
-            >
-              {t('hero.download')}
-            </Button>
-          </div>
-          <Button
-            href={'/en/download'}
-            className="block md:hidden px-[40px] py-[10px] shadow-sm text-black bg-white rounded-[15px] font-bold"
-          >
-            {t('hero.download')}
-          </Button>
-        </div>
+      >        
+      <TopNav />
         <div className="flex flex-col md:flex-row flex-1 gap-[0] justify-start md:justify-center overflow-hidden">
           <div className="flex flex-col justify-start pt-[40px] md:pt-0 md:justify-center gap-[10px]">
             <div className="font-title font-bold text-[31px] md:text-[50px] text-white uppercase">
@@ -318,70 +248,8 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Section>
-        <div className="flex-col md:flex-row gap-[20px] flex justify-between items-start">
-          <AppLogo />
-          <div className="flex flex-col md:flex-row justify-end gap-[40px]">
-            <div>
-              <div className="font-body flex flex-col gap-2">
-                <div className="font-bold">Support</div>
-                <div className="flex gap-2">
-                  <img
-                    src="/email.svg"
-                    alt="email"
-                    width={19}
-                    height={15}
-                  />
-                  <a href="mailto:fluentpal.app@gmail.com">
-                    fluentpal.app@gmail.com
-                  </a>
-                </div>
-                <div className="flex gap-2">
-                  <img
-                    src="/discord.svg"
-                    alt="facebook"
-                    width={19}
-                    height={19}
-                  />
-                  <a href="https://discord.gg/4ZWFPFVUUw">Discord</a>
-                </div>
-                <div className="flex gap-2">
-                  <img
-                    src="/facebook.svg"
-                    alt="facebook"
-                    width={19}
-                    height={19}
-                  />
-                  <a href="https://www.facebook.com/profile.php?id=61550890358472">
-                    Facebook
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-              <div>
-                <div className="font-bold">Partners</div>
-                <div className="pt-[7px]">
-                  <a
-                    href="https://dailydictation.com/"
-                    target="_blank"
-                  >
-                    English dictation exercises
-                  </a>
-                </div>
-                <div className="pt-[7px]">
-                  <a
-                    href="https://ourbabyai.com/"
-                    target="_blank"
-                  >
-                    See Your Future Baby
-                  </a>
-                </div>
-              </div>
-            
-          </div>
-        </div>
-      </Section>
+      <Footer />
+      
       <div className="shadow-[0px_-1px_10px_rgba(0,0,0,0.1)] fixed bottom-0 right-0 bg-[#fff] rounded-tl-[16px] text-black font-body font-bold px-[25px] py-[10px]">
         <a
           href="https://discord.gg/4ZWFPFVUUw"

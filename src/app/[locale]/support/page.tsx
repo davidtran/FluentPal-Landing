@@ -17,7 +17,7 @@ export default function Page() {
             width={19}
             height={15}
           />
-          fluentpal.app@gmail.com
+          contact@fluentpal.app
         </div>
         <div className="flex gap-2">
           <img

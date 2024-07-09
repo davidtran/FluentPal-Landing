@@ -6,7 +6,7 @@ export default {
       description:
         'Ứng dụng giúp bạn học giao tiếp ngoại ngữ thông qua giáo viên AI, tham gia vào các tình huống nhập vai và trò chuyện cùng các nhân vật AI nổi tiếng.',
       tap_future: 'Bắt đầu hành trình của bạn',
-      download: 'Bắt đầu',
+      download: 'Tải về',
       download_desc:
         'Ứng dụng có mặt tại <strong>AppStore</strong> và <strong>PlayStore</strong>',
       scan_qr: 'Quét mã QR để tải về',
@@ -80,6 +80,7 @@ export default {
     },
     support: {
       title: 'Liên hệ',
+      affiliate: 'Tiếp thị liên kết',
       email: 'nam.trankhanh.vn@gmail.com',
       reddit: 'FluentPal on Reddit',
     },
@@ -88,6 +89,18 @@ export default {
       description:
         'Được phát triển từ tháng 8 năm 2023, FluentPal đã nhanh chóng nhận được sự hưởng ứng của người dùng và là sản phẩm không thể thiếu đối với người học ngoại ngữ.',
     },
+  },
+  affiliate: {
+    title: 'Trở thành đối tác của FluentPal',
+    description: 'Tham gia chương trình tiếp thị liên kết để nhận 20% hoa hồng cho mỗi lượt đăng ký do bạn giới thiệu. Hãy cùng FluentPal mang đến trải nghiệm học ngoại ngữ thú vị cho mọi người.',
+    join_now: 'Đăng ký ngay',
+    how_it_works: 'Cách hoạt động',
+    step_1_title: 'Đăng ký',
+    step_1_desc: 'Đăng ký chương trình tiếp thị liên kết của FluentPal. Bạn sẽ được nhận đường link giới thiệu app và trang web để bạn theo dõi số lượt cài đặt và hoa hồng của bạn.',
+    step_2_title: 'Chia sẻ',
+    step_2_desc: 'Chia sẻ đường link giới thiệu cho bạn bè, người thân, và những người theo dõi bạn. Bạn được ghi nhận hoa hồng khi có người đăng ký ứng dụng thông qua đường link của bạn.',
+    step_3_title: 'Nhận hoa hồng',
+    step_3_desc: 'Hoa hồng sẽ tích lũy và chuyển khoảng vào tài khoản ngân hàng của bạn vào cuối tháng. Tối thiểu 1 triệu đồng mỗi lần gửi.',
   },
   replay: {
     listening_to: 'Lắng nghe cuộc trò chuyện của {username}',

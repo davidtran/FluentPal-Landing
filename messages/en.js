@@ -78,7 +78,8 @@ export default {
     },
     support: {
       title: 'Contact',
-      email: 'support@fluentpal.app',
+      affiliate: 'Affiliate',
+      email: 'contact@fluentpal.app',
       reddit: 'FluentPal on Reddit',
     },
     review: {
@@ -86,6 +87,18 @@ export default {
       description:
         'Developed since August 2023, FluentPal quickly gained user support and has become an essential product for language learners.',
     },
+  },
+  affiliate: {
+    title: 'Become a partner',
+    description: 'Join the affiliate marketing program to receive 20% commission for each registration you refer. Join FluentPal to bring an enjoyable language learning experience to everyone.',
+    join_now: 'Join now',
+    how_it_works: 'How it works?',
+    step_1_title: 'Sign up',
+    step_1_desc: 'Sign up for FluentPal\'s affiliate program. You will receive referral links for the app and website, allowing you to track your installations and commissions.',
+    step_2_title: 'Share your link',
+    step_2_desc: 'Share your referral link with friends, family, and followers. You will earn a commission when someone registers for the app through your link.',
+    step_3_title: 'Get paid',
+    step_3_desc: 'Commissions will accumulate and be transferred to your bank account at the end of the month. The minimum transfer amount is $50.',
   },
   replay: {
     listening_to: "Listening to {username}'s conversation",
