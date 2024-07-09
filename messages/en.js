@@ -98,7 +98,7 @@ export default {
     step_2_title: 'Share your link',
     step_2_desc: 'Share your referral link with friends, family, and followers. You will earn a commission when someone registers for the app through your link.',
     step_3_title: 'Get paid',
-    step_3_desc: 'Commissions will accumulate and be transferred to your bank account at the end of the month. The minimum transfer amount is $50.',
+    step_3_desc: 'Commissions will accumulate and be transferred to your Paypal at the end of the month. The minimum transfer amount is $50.',
   },
   replay: {
     listening_to: "Listening to {username}'s conversation",
