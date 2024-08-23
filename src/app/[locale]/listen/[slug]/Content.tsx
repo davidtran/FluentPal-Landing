@@ -55,21 +55,23 @@ export const Content = () => {
     audio.current.addEventListener('ended', onAudioEnd);
   }
 
-  function onAudioEnd() {
-    const nextIndex = replayIndexRef.current + 1;
-
-    if (nextIndex === replay.messages.length) {
+  function playChatBubble(index: number) {
+    if (audio.current) {
+      audio.current.pause();
+    }
+    
+    if (index > replay.messages.length - 1) {
       setIsReplayEnded(true);
       return;
     }
 
-    const message = replay.messages[nextIndex];
+    const message = replay.messages[index];
 
     if (message.sound_uri) {
       setTimeout(() => {
-        replayIndexRef.current = nextIndex;
-        setReplayIndex(nextIndex);
-        audio.current = new Audio(replay.messages[nextIndex].sound_uri);
+        replayIndexRef.current = index;      
+        setReplayIndex(index);  
+        audio.current = new Audio(replay.messages[index].sound_uri);
         audio.current.play();
         audio.current.addEventListener('ended', onAudioEnd);
         setTimeout(() => {
@@ -82,8 +84,8 @@ export const Content = () => {
       }, 300);
     } else {
       setTimeout(() => {
-        replayIndexRef.current = nextIndex;
-        setReplayIndex(nextIndex);
+        replayIndexRef.current = index;
+        setReplayIndex(index);
         setTimeout(() => {
           //containerRef.current?.scrollTo({ top: containerRef.current.clientHeight - containerRef.current.scrollTop })
           if (containerRef.current) {
@@ -94,10 +96,11 @@ export const Content = () => {
         onAudioEnd();
 
       }, 1000);
-    }
-    
-    
-    
+    }    
+  }
+
+  function onAudioEnd() {    
+    playChatBubble(replayIndexRef.current + 1);
   }
 
   function togglePlayPause() {
@@ -148,48 +151,67 @@ export const Content = () => {
                 'blur-[4px]': !isStarted,
               })}
             >
-              {replay.messages
-                .slice(0, !isStarted ? -1 : replayIndex + 1)
-                .map((item: any, index: number) => (
-                  <div
-                    key={item.position}
-                    className={classNames(
-                      'flex flex-col max-w-[70%]',
-                      index % 2 !== 0 && `text-white self-end`
-                    )}
-                  >
+              {replay.messages                
+                .map((item: any, index: number) => {
+                  const isActive = index === replayIndex
+                  return (                    
                     <div
+                      key={item.position}
+                      onClick={() => playChatBubble(index)}
                       className={classNames(
-                        'flex flex-col',
-                        index % 2 !== 0 && 'self-end'
+                        'flex flex-col max-w-[70%] cursor-pointer',
+                        index % 2 !== 0 && `text-white self-end`,                        
                       )}
                     >
                       <div
                         className={classNames(
-                          'text-[12px] text-black mb-[2px]',
-                          {
-                            'text-right': index % 2 !== 0,
-                          }
+                          'flex flex-col',
+                          index % 2 !== 0 && 'self-end'
                         )}
                       >
-                        {item.name || index % 2 === 0 ? replay.ai_name : replay.username}                        
-                      </div>
-                      <div
-                        className={classNames(
-                          'rounded-[10px] p-[10px] mb-[10px]',
-                          {
-                            'bg-[#ECECEC]': index % 2 === 0,
-                            'bg-[#1371FF]': index % 2 !== 0,
-                          },
-                          index % 2 === 0 && `bg-[#ECECEC]`,
-                          index % 2 !== 0 && `text-white self-end`
-                        )}
-                      >
-                        <div>{item.message}</div>
+                        <div
+                          className={classNames(
+                            'text-[12px] text-black mb-[2px] flex flex-row gap-[5px]',
+                            {
+                              'text-right': index % 2 !== 0,
+                              'justify-end': index % 2 !== 0,
+                            }
+
+                          )}
+                        >
+                          <span>{index % 2 === 0 ? replay.ai_name : item.name}</span>                        
+                          {isPlaying && isActive ? (
+                            <img
+                              src="/pause.svg"
+                              width={8}
+                              height={8}
+                            />
+                          ) : (
+                            <img
+                              src="/play.svg"
+                              width={8}
+                              height={8}
+                            />
+                          )}
+                        </div>
+                        <div
+                          className={classNames(
+                            'rounded-[10px] p-[10px] mb-[10px]',
+                            {
+                              'bg-[#ECECEC]': index % 2 === 0,
+                              'bg-[#1371FF]': index % 2 !== 0,
+                            },
+                            index % 2 === 0 && `bg-[#ECECEC]`,
+                            index % 2 !== 0 && `text-white self-end`,
+                            isActive ? 'opacity-1' : 'opacity-[0.4]'
+                          )}
+                        >
+                          <div>{item.message}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
             </div>
             {isReplayEnded && (
               <div className="font-bold text-center pt-[10px] text-[#747474] text-[12px]">
