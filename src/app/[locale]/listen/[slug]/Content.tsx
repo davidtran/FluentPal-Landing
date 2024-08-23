@@ -73,26 +73,12 @@ export const Content = () => {
         setReplayIndex(index);  
         audio.current = new Audio(replay.messages[index].sound_uri);
         audio.current.play();
-        audio.current.addEventListener('ended', onAudioEnd);
-        setTimeout(() => {
-          //containerRef.current?.scrollTo({ top: containerRef.current.clientHeight - containerRef.current.scrollTop })
-          if (containerRef.current) {
-          containerRef.current.scrollTop = containerRef.current.scrollHeight;
-        }
-        }, 50);
-        
+        audio.current.addEventListener('ended', onAudioEnd);        
       }, 300);
     } else {
       setTimeout(() => {
         replayIndexRef.current = index;
-        setReplayIndex(index);
-        setTimeout(() => {
-          //containerRef.current?.scrollTo({ top: containerRef.current.clientHeight - containerRef.current.scrollTop })
-          if (containerRef.current) {
-          containerRef.current.scrollTop = containerRef.current.scrollHeight;
-        }
-        }, 50);
-        
+        setReplayIndex(index);        
         onAudioEnd();
 
       }, 1000);
