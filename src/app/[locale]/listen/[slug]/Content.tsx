@@ -58,6 +58,7 @@ export const Content = () => {
   function playChatBubble(index: number) {
     if (audio.current) {
       audio.current.pause();
+      audio.current.removeEventListener('ended', onAudioEnd);
     }
     
     if (index > replay.messages.length - 1) {
@@ -71,16 +72,16 @@ export const Content = () => {
       setTimeout(() => {
         replayIndexRef.current = index;      
         setReplayIndex(index);  
-        audio.current = new Audio(replay.messages[index].sound_uri);
+        audio.current = new Audio(message.sound_uri);
         audio.current.play();
-        audio.current.addEventListener('ended', onAudioEnd);        
+        audio.current.addEventListener('ended', onAudioEnd);
+        setIsPlaying(true);
       }, 300);
     } else {
       setTimeout(() => {
         replayIndexRef.current = index;
         setReplayIndex(index);        
         onAudioEnd();
-
       }, 1000);
     }    
   }
