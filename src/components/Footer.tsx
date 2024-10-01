@@ -61,21 +61,26 @@ export default function Footer() {
                 >
                   English dictation exercises
                 </a>
-              </div>
-              <div className="pt-[7px]">
-                <a
-                  href="https://ourbabyai.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  See Your Future Baby
-                </a>
+              </div>              
+            </div>
+
+            <div>
+              <div className="font-bold mb-2">Contact</div>
+              <div className="text-sm flex flex-col gap-2">
+                <div>LANGUAGE TOWN COMPANY LIMITED</div>
+                <div>Tran Khanh Nam</div>
+                <div className="mt-1">5/42b Nguyen Cuu Dam, Tan Son Nhi,<br/> Tan Phu, Ho Chi Minh City, Vietnam</div>
+                <div className="mt-1">
+                  <a href="mailto:nam.trankhanh@gmail.com" className="hover:underline">
+                    nam.trankhanh@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="text-center text-sm text-gray-500 mt-4">
-          © {new Date().getFullYear()} Language Town. All rights reserved.
+          <div>© {new Date().getFullYear()} Language Town. All rights reserved.</div>          
         </div>
       </div>
     </Section>
