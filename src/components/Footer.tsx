@@ -69,7 +69,7 @@ export default function Footer() {
               <div className="text-sm flex flex-col gap-2">
                 <div>LANGUAGE TOWN COMPANY LIMITED</div>
                 <div>Tran Khanh Nam</div>
-                <div className="mt-1">5/42b Nguyen Cuu Dam, Tan Son Nhi,<br/> Tan Phu, Ho Chi Minh City, Vietnam</div>
+                <div className="mt-1">5/42B Nguyễn Cửu Đàm, Phường Tân Sơn Nhì,<br/> Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</div>
                 <div className="mt-1">
                   <a href="mailto:nam.trankhanh@gmail.com" className="hover:underline">
                     nam.trankhanh@gmail.com
