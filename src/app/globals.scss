@@ -45,10 +45,3 @@ body {
     background-color: white;
   }
 }
-
-/* Add safe area padding for modern iOS devices */
-@supports (padding: max(0px)) {
-  .fixed.bottom-0 {
-    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
-  }
-}
