@@ -1,10 +1,10 @@
-import { useLocale, useTranslations } from 'next-intl';
-import { AppLogo } from './AppLogo';
-import { Section } from './Section';
+import { useLocale, useTranslations } from "next-intl";
+import { AppLogo } from "./AppLogo";
+import { Section } from "./Section";
 
 export default function Footer() {
   const locale = useLocale();
-  const t = useTranslations('home');
+  const t = useTranslations("home");
   return (
     <Section outerClassName="border-t-[1px] pb-[10px]">
       <div className="flex flex-col gap-[40px]">
@@ -21,7 +21,9 @@ export default function Footer() {
                     width={19}
                     height={15}
                   />
-                  <a href="mailto:contact@fluentpal.app">contact@fluentpal.app</a>
+                  <a href="mailto:contact@fluentpal.app">
+                    contact@fluentpal.app
+                  </a>
                 </div>
                 <div className="flex gap-2">
                   <img
@@ -49,9 +51,7 @@ export default function Footer() {
             <div>
               <div className="font-bold">Links</div>
               <div className="pt-[7px]">
-                <a href={`/${locale}/affiliate`}>
-                  {t('support.affiliate')}
-                </a>
+                <a href={`/${locale}/affiliate`}>{t("support.affiliate")}</a>
               </div>
               <div className="pt-[7px]">
                 <a
@@ -61,26 +61,14 @@ export default function Footer() {
                 >
                   English dictation exercises
                 </a>
-              </div>              
-            </div>
-
-            <div>
-              <div className="font-bold mb-2">Contact</div>
-              <div className="text-sm flex flex-col gap-2">
-                <div>LANGUAGE TOWN COMPANY LIMITED</div>
-                <div>Tran Khanh Nam</div>
-                <div className="mt-1">5/42B Nguyễn Cửu Đàm, Phường Tân Sơn Nhì,<br/> Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</div>
-                <div className="mt-1">
-                  <a href="mailto:nam.trankhanh@gmail.com" className="hover:underline">
-                    nam.trankhanh@gmail.com
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
         <div className="text-center text-sm text-gray-500 mt-4">
-          <div>© {new Date().getFullYear()} Language Town. All rights reserved.</div>          
+          <div>
+            © {new Date().getFullYear()} Language Town. All rights reserved.
+          </div>
         </div>
       </div>
     </Section>
