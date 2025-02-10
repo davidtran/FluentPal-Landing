@@ -57,9 +57,16 @@ export default function Footer() {
                 <a
                   href="https://dailydictation.com/"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   English dictation exercises
+                </a>
+              </div>
+              <div className="pt-[7px]">
+                <a
+                  href="https://www.binsoo.app/"
+                  target="_blank"
+                >
+                  Binsoo: Photo Filters & Editor
                 </a>
               </div>
             </div>
