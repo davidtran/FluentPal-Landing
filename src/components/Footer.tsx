@@ -50,8 +50,14 @@ export default function Footer() {
 
             <div>
               <div className="font-bold">Links</div>
+
               <div className="pt-[7px]">
-                <a href={`/${locale}/affiliate`}>{t("support.affiliate")}</a>
+                <a
+                  href="https://tutoraistudy.com/"
+                  target="_blank"
+                >
+                  TutorAI: Notes and homework helper
+                </a>
               </div>
               <div className="pt-[7px]">
                 <a
