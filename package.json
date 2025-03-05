@@ -5,16 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "PORT=4700 next start",
+    "start": "PORT=4701 next start",
     "lint": "next lint",
     "write-blog": "ts-node src/cron/write-blog.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.33.1",
+    "@reacticons/ionicons": "^7.1.0",
     "@types/better-sqlite3": "^7.6.12",
     "@uiw/react-markdown-preview": "^5.0.7",
     "axios": "^1.6.3",
     "better-sqlite3": "^11.7.2",
+    "chart.js": "^4.4.8",
     "classnames": "^2.3.2",
     "dotenv": "^16.4.7",
     "i18next": "^23.7.6",
@@ -27,6 +29,7 @@
     "npm": "^10.2.0",
     "openai": "^4.77.3",
     "react": "latest",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "latest",
     "react-i18next": "^13.5.0",
     "sass": "^1.70.0",

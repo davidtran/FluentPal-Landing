@@ -1,3 +1,6 @@
+import { quizQuestions } from "./quiz/en";
+import quizRoadmap from "./quiz/roadmap/en";
+
 export default {
   home: {
     join_our_discord: "Join our Discord",
@@ -152,5 +155,268 @@ export default {
     replay_not_found: "Replay not found or incorrect URL",
     ended: "Ended",
     download: "Get FluentPal 📱",
+  },
+
+  quiz: {
+    ...quizQuestions,
+    ...quizRoadmap,
+    language: {
+      title: "Which language are you learning?",
+      description:
+        "Select the language you're currently learning or interested in learning.",
+    },
+    duration: {
+      title: "How long have you been learning?",
+      description:
+        "Select the time period that best describes your learning journey.",
+      options: {
+        justStarted: "Just started",
+        oneSixMonths: "1 to 6 months",
+        oneYear: "1 year",
+        twoYears: "1 to 2 years",
+        twoFiveYears: "2 to 5 years",
+        moreThanFiveYears: "More than 5 years",
+      },
+    },
+    level: {
+      title: "What's your current proficiency level?",
+      description:
+        "Select the level that best describes your current abilities.",
+    },
+    goal: {
+      title: "What's your primary learning goal?",
+      description: "Select the main reason you're learning this language.",
+      options: {
+        travel: "Travel",
+        work: "Work/Business",
+        study: "Academic Study",
+        culture: "Cultural Interest",
+        friends: "Communicate with Friends/Family",
+        living: "Living Abroad",
+        hobby: "Personal Interest/Hobby",
+      },
+    },
+    questions: {
+      title: "Speaking Skills Assessment",
+      description:
+        "Help us understand your speaking abilities and challenges by answering these questions. Your responses will help us provide better conversation practice solutions.",
+      progress: "Question {current} of {total}",
+      multipleChoice: "Select up to {max} options",
+      continue: "Continue",
+    },
+    results: {
+      title: "Your Speaking Assessment Results",
+      language: "Language",
+      level: "Level",
+      goal: "Goal",
+      challenges: {
+        title: "Your Speaking Challenges",
+        noChallenges:
+          "Based on your responses, you don't seem to have major speaking challenges. However, everyone can improve their speaking skills with practice.",
+      },
+      insights: {
+        title: "Your Learning Insights",
+        profile: {
+          earlyBeginner: {
+            title: "Early Beginner",
+            description:
+              "You're just starting your language journey. Focus on building basic vocabulary and simple phrases to establish a foundation.",
+          },
+          beginner: {
+            title: "Beginner",
+            description:
+              "You have some basic knowledge but need regular practice to build confidence in speaking and understanding.",
+          },
+          advancedBeginner: {
+            title: "Advanced Beginner",
+            description:
+              "You're progressing well with the basics and are ready to expand your vocabulary and practice more conversation.",
+          },
+          earlyIntermediate: {
+            title: "Early Intermediate",
+            description:
+              "You can handle basic conversations but need to work on fluency and expanding your range of expression.",
+          },
+          intermediate: {
+            title: "Intermediate",
+            description:
+              "You can communicate in many situations but sometimes struggle with complex topics or fast speech.",
+          },
+          advancedIntermediate: {
+            title: "Advanced Intermediate",
+            description:
+              "You communicate well in most situations and are ready to focus on nuance, idioms, and cultural expressions.",
+          },
+          earlyAdvanced: {
+            title: "Early Advanced",
+            description:
+              "You're comfortable in most situations but still have room to improve in specialized vocabulary and subtle expressions.",
+          },
+          advanced: {
+            title: "Advanced",
+            description:
+              "You have strong language skills and can focus on refining nuances, cultural context, and specialized topics.",
+          },
+        },
+        recommendations: {
+          title: "Personalized Recommendations",
+          earlyBeginner: {
+            0: "Start with 5-10 minute daily speaking practice sessions",
+            1: "Focus on learning common greetings and everyday phrases",
+            2: "Use AI conversation practice to build confidence without judgment",
+          },
+          beginner: {
+            0: "Practice basic conversations about familiar topics daily",
+            1: "Build vocabulary around your specific interests and goals",
+            2: "Use simple conversations to develop confidence in speaking",
+          },
+          advancedBeginner: {
+            0: "Increase speaking practice to 15 minutes daily",
+            1: "Start having conversations about your daily activities and interests",
+            2: "Practice asking and answering common questions fluently",
+          },
+          earlyIntermediate: {
+            0: "Practice expressing opinions on familiar topics",
+            1: "Work on reducing pauses and hesitations in your speech",
+            2: "Expand vocabulary related to your specific learning goals",
+          },
+          intermediate: {
+            0: "Have regular conversations about current events and abstract topics",
+            1: "Practice explaining complex ideas in your target language",
+            2: "Work on understanding different accents and speech patterns",
+          },
+          advancedIntermediate: {
+            0: "Practice discussing specialized topics related to your interests",
+            1: "Work on using idioms and cultural expressions naturally",
+            2: "Focus on sounding more natural and reducing non-native patterns",
+          },
+          earlyAdvanced: {
+            0: "Practice handling unexpected topics and situations",
+            1: "Refine your ability to express subtle differences in meaning",
+            2: "Work on specialized vocabulary for professional or academic contexts",
+          },
+          advanced: {
+            0: "Challenge yourself with debates and complex discussions",
+            1: "Focus on cultural nuances and region-specific expressions",
+            2: "Perfect your accent and work on sounding like a native speaker",
+          },
+        },
+      },
+      cta: {
+        button: "Get Your Personalized Speaking Practice Plan",
+        description:
+          "We've created a customized plan based on your assessment to help you improve your speaking skills.",
+      },
+    },
+
+    download: {
+      title: "Download Our Language Learning App",
+      description:
+        "Get our app to practice speaking and improve your language skills anytime, anywhere.",
+      instructions: {
+        title: "How to use your plan",
+        steps: [
+          "Review your speaking challenges and focus areas",
+          "Follow the suggested weekly practice schedule",
+          "Use the recommended resources to supplement your practice",
+          "Track your progress and adjust as needed",
+          "Practice consistently for best results",
+        ],
+      },
+      formats: {
+        title: "Available formats",
+        pdf: {
+          title: "PDF Document",
+          description: "Comprehensive plan with all details and resources",
+        },
+        calendar: {
+          title: "Calendar Integration",
+          description: "Add practice sessions directly to your calendar",
+        },
+        mobile: {
+          title: "Mobile App",
+          description: "Access your plan on our mobile app with reminders",
+        },
+      },
+      cta: {
+        download: "Download PDF",
+        calendar: "Add to Calendar",
+        app: "Open in App",
+        email: "Email to Me",
+      },
+      emailForm: {
+        title: "Email your plan",
+        description: "We'll send your personalized plan to your email address",
+        emailLabel: "Your email address",
+        emailPlaceholder: "Enter your email",
+        submit: "Send Plan",
+        privacy:
+          "We respect your privacy and will never share your email with third parties.",
+      },
+      success: {
+        title: "Success!",
+        description:
+          "Your plan has been sent to your email. Check your inbox in a few minutes.",
+        spam: "If you don't see it, please check your spam folder.",
+      },
+      app: {
+        download: "Download Our App",
+        description:
+          "Get our app for the best language learning experience. Practice speaking anytime, anywhere.",
+        ios: "Download on the App Store",
+        android: "Get it on Google Play",
+        qrCode: "Scan QR Code",
+        qrDescription:
+          "Scan this QR code with your phone's camera to download the app directly",
+      },
+      features: {
+        title: "App Features",
+        ai: {
+          title: "AI Conversation Partner",
+          description:
+            "Practice speaking with our AI in a judgment-free environment",
+        },
+        feedback: {
+          title: "Instant Feedback",
+          description: "Get real-time feedback on pronunciation and grammar",
+        },
+        plan: {
+          title: "Personalized Plan",
+          description: "Follow your customized speaking practice plan",
+        },
+      },
+      faq: {
+        title: "Frequently Asked Questions",
+        items: [
+          {
+            question: "How do I download the app?",
+            answer:
+              "You can download our app from the App Store for iOS devices or from Google Play Store for Android devices. Simply click on the respective download buttons above.",
+          },
+          {
+            question: "Is the app free to download?",
+            answer:
+              "Yes, the basic version of our app is free to download. We offer premium features through in-app purchases.",
+          },
+          {
+            question: "What languages are supported?",
+            answer:
+              "Our app currently supports 10 languages including English, Spanish, French, German, Italian, Portuguese, Japanese, Chinese (Mandarin), Korean, Russian.",
+          },
+          {
+            question: "How does the QR code work?",
+            answer:
+              "Scan the QR code with your phone's camera app. This will take you directly to the app download page on your device's app store.",
+          },
+        ],
+      },
+      support: {
+        title: "Need Help?",
+        description:
+          "If you have any questions or need assistance, please contact our support team:",
+        email: "contact@fluentpal.app",
+        facebook: "Facebook",
+      },
+    },
   },
 };
