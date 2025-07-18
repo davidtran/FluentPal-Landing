@@ -1,0 +1,285 @@
+{
+  "quiz": {
+    "language": {
+      "title": "Bạn đang học ngôn ngữ nào?",
+      "description": "Chọn ngôn ngữ bạn đang học hoặc quan tâm."
+    },
+    "duration": {
+      "title": "Bạn đã học được bao lâu?",
+      "description": "Chọn khoảng thời gian mô tả hành trình học tập của bạn."
+    },
+    "level": {
+      "title": "Trình độ hiện tại của bạn là gì?",
+      "description": "Chọn cấp độ mô tả khả năng hiện tại của bạn."
+    },
+    "goal": {
+      "title": "Mục tiêu học tập chính của bạn là gì?",
+      "description": "Chọn lý do chính bạn đang học ngôn ngữ này."
+    },
+    "questions": {
+      "title": "Đánh giá Kỹ năng Nói",
+      "description": "Giúp chúng tôi hiểu khả năng và thách thức khi nói của bạn bằng cách trả lời các câu hỏi này. Câu trả lời của bạn sẽ giúp chúng tôi cung cấp giải pháp luyện tập hội thoại tốt hơn.",
+      "progress": "Câu hỏi {current} trong số {total}",
+      "multipleChoice": "Chọn tối đa {max} lựa chọn",
+      "continue": "Tiếp tục"
+    },
+    "results": {
+      "title": "Kết quả Đánh giá Kỹ năng Nói của Bạn",
+      "language": "Ngôn ngữ",
+      "level": "Trình độ",
+      "goal": "Mục tiêu",
+      "challenges": {
+        "title": "Thách thức khi Nói của Bạn",
+        "noChallenges": "Dựa trên câu trả lời của bạn, có vẻ như bạn không gặp thách thức lớn khi nói. Tuy nhiên, ai cũng có thể cải thiện kỹ năng nói của mình với việc luyện tập."
+      },
+      "recommendations": {
+        "title": "Khuyến nghị",
+        "regularPractice": {
+          "title": "Luyện tập Nói Thường xuyên",
+          "description": "Dành ít nhất 15-30 phút mỗi ngày để luyện tập nói, ngay cả khi chỉ là nói chuyện với chính mình."
+        },
+        "confidence": {
+          "title": "Xây dựng Sự tự tin",
+          "description": "Bắt đầu với các tình huống nói áp lực thấp. Sử dụng đối tác hội thoại AI để luyện tập mà không bị đánh giá."
+        },
+        "vocabulary": {
+          "title": "Mở rộng Từ vựng",
+          "description": "Tập trung vào việc học các từ và cụm từ hội thoại thông dụng thay vì từ vựng chung."
+        },
+        "pronunciation": {
+          "title": "Luyện tập Phát âm",
+          "description": "Sử dụng các công cụ nhận dạng giọng nói để nhận phản hồi về phát âm của bạn. Ghi âm bản thân nói và so sánh với người bản xứ."
+        },
+        "grammar": {
+          "title": "Ngữ pháp Thực tế",
+          "description": "Tập trung vào việc sử dụng ngữ pháp trong các cuộc hội thoại thực tế thay vì ghi nhớ quy tắc. Luyện tập tạo câu nhanh chóng khi nói."
+        },
+        "fluency": {
+          "title": "Phát triển Sự trôi chảy",
+          "description": "Luyện tập nói không ngừng. Thử các bài tập bóng theo trong đó bạn lặp lại những gì người bản xứ nói theo thời gian thực."
+        },
+        "comprehension": {
+          "title": "Nghe Hiểu",
+          "description": "Cải thiện khả năng hiểu người bản xứ thông qua luyện tập nghe chủ động với podcast, video và các cuộc hội thoại."
+        },
+        "travel": {
+          "title": "Luyện tập Hội thoại Du lịch",
+          "description": "Tập trung vào các tình huống du lịch thực tế như đặt đồ ăn, hỏi đường và xử lý phương tiện giao thông."
+        },
+        "work": {
+          "title": "Kỹ năng Nói Chuyên nghiệp",
+          "description": "Luyện tập từ vựng và cụm từ cụ thể cho ngành của bạn. Tập trung vào kỹ năng thuyết trình chính thức."
+        }
+      },
+      "cta": {
+        "button": "Nhận Kế hoạch Luyện tập Nói Cá nhân hóa",
+        "description": "Chúng tôi đã tạo một kế hoạch tùy chỉnh dựa trên đánh giá của bạn để giúp bạn cải thiện kỹ năng nói."
+      }
+    },
+    "roadmap": {
+      "title": "Lộ trình Học Ngôn ngữ của Bạn",
+      "subtitle": "Kế hoạch cá nhân hóa để cải thiện kỹ năng nói của bạn",
+      "overview": {
+        "title": "Tổng quan",
+        "description": "Dựa trên đánh giá của bạn, chúng tôi đã tạo một lộ trình tùy chỉnh để giúp bạn cải thiện kỹ năng nói tiếng {language}. Kế hoạch này tập trung vào những thách thức và mục tiêu cụ thể của bạn."
+      },
+      "weeklyPlan": {
+        "title": "Kế hoạch Luyện tập Hàng tuần",
+        "description": "Luyện tập đều đặn là chìa khóa để cải thiện kỹ năng nói. Đây là lịch trình hàng tuần được đề xuất:",
+        "days": {
+          "monday": "Thứ Hai",
+          "tuesday": "Thứ Ba",
+          "wednesday": "Thứ Tư",
+          "thursday": "Thứ Năm",
+          "friday": "Thứ Sáu",
+          "weekend": "Cuối tuần"
+        },
+        "activities": {
+          "vocabulary": "Tập trung Từ vựng",
+          "speaking": "Luyện tập Nói",
+          "listening": "Luyện tập Nghe",
+          "grammar": "Ngữ pháp trong Ngữ cảnh",
+          "pronunciation": "Luyện tập Phát âm",
+          "conversation": "Luyện tập Hội thoại",
+          "review": "Ôn tập & Tự đánh giá"
+        }
+      },
+      "focusAreas": {
+        "title": "Lĩnh vực Tập trung của Bạn",
+        "confidence": {
+          "title": "Xây dựng Sự tự tin",
+          "tips": [
+            "Bắt đầu với các cuộc hội thoại ngắn, có kịch bản",
+            "Luyện tập với đối tác hội thoại AI trước khi nói chuyện với người thật",
+            "Ghi âm bản thân nói và nghe lại",
+            "Tham gia các nhóm trao đổi ngôn ngữ với các thành viên hỗ trợ",
+            "Ăn mừng những thành công nhỏ và tiến bộ"
+          ]
+        },
+        "vocabulary": {
+          "title": "Mở rộng Từ vựng Hội thoại",
+          "tips": [
+            "Học từ vựng trong ngữ cảnh thông qua đối thoại",
+            "Tập trung vào các từ thông dụng được sử dụng trong hội thoại",
+            "Luyện tập sử dụng từ mới trong câu ngay lập tức",
+            "Tạo các cụm từ vựng xoay quanh chủ đề hội thoại",
+            "Sử dụng lặp lại ngắt quãng để ôn tập từ vựng thường xuyên"
+          ]
+        },
+        "pronunciation": {
+          "title": "Cải thiện Phát âm",
+          "tips": [
+            "Tập trung vào các âm không tồn tại trong ngôn ngữ mẹ đẻ của bạn",
+            "Luyện tập các cặp tối thiểu để phân biệt các âm tương tự",
+            "Ghi âm bản thân và so sánh với người bản xứ",
+            "Sử dụng các công cụ nhận dạng giọng nói để nhận phản hồi",
+            "Học các mẫu nhịp điệu và ngữ điệu của ngôn ngữ"
+          ]
+        },
+        "fluency": {
+          "title": "Phát triển Sự trôi chảy",
+          "tips": [
+            "Luyện tập nói không ngừng, ngay cả khi bạn mắc lỗi",
+            "Thử các bài tập bóng theo với âm thanh bản xứ",
+            "Học các từ đệm và kết nối hội thoại thông dụng",
+            "Luyện tập mô tả các đồ vật và hoạt động hàng ngày",
+            "Đặt hẹn giờ và nói liên tục trong thời gian ngày càng tăng"
+          ]
+        }
+      },
+      "resources": {
+        "title": "Tài nguyên Được đề xuất",
+        "apps": {
+          "title": "Ứng dụng",
+          "description": "Ứng dụng di động để luyện tập khi di chuyển"
+        },
+        "websites": {
+          "title": "Trang web",
+          "description": "Tài nguyên trực tuyến để học có cấu trúc"
+        },
+        "podcasts": {
+          "title": "Podcast",
+          "description": "Nội dung âm thanh để luyện tập nghe"
+        },
+        "youtube": {
+          "title": "Kênh YouTube",
+          "description": "Nội dung video cho người học trực quan"
+        }
+      },
+      "nextSteps": {
+        "title": "Các bước Tiếp theo",
+        "description": "Sẵn sàng bắt đầu cải thiện kỹ năng nói của bạn?",
+        "cta": "Thử Luyện tập Hội thoại FluentAI",
+        "benefits": [
+          "Luyện tập nói với đối tác hội thoại AI của chúng tôi",
+          "Nhận phản hồi ngay lập tức về phát âm và ngữ pháp",
+          "Xây dựng sự tự tin trong môi trường không phán xét",
+          "Theo dõi tiến trình của bạn theo thời gian",
+          "Luyện tập bất cứ lúc nào, bất cứ nơi đâu"
+        ]
+      }
+    },
+    "download": {
+      "title": "Tải Ứng Dụng Học Ngôn Ngữ Của Chúng Tôi",
+      "description": "Tải ứng dụng của chúng tôi để luyện nói và cải thiện kỹ năng ngôn ngữ của bạn mọi lúc, mọi nơi.",
+      "instructions": {
+        "title": "Cách sử dụng kế hoạch của bạn",
+        "steps": [
+          "Xem xét các thách thức và lĩnh vực trọng tâm khi nói của bạn",
+          "Làm theo lịch luyện tập hàng tuần được đề xuất",
+          "Sử dụng các tài nguyên được đề xuất để bổ sung cho việc luyện tập của bạn",
+          "Theo dõi tiến trình và điều chỉnh khi cần thiết",
+          "Luyện tập đều đặn để có kết quả tốt nhất"
+        ]
+      },
+      "formats": {
+        "title": "Các định dạng có sẵn",
+        "pdf": {
+          "title": "Tài liệu PDF",
+          "description": "Kế hoạch toàn diện với tất cả các chi tiết và tài nguyên"
+        },
+        "calendar": {
+          "title": "Tích hợp lịch",
+          "description": "Thêm các buổi luyện tập trực tiếp vào lịch của bạn"
+        },
+        "mobile": {
+          "title": "Ứng dụng di động",
+          "description": "Truy cập kế hoạch của bạn trên ứng dụng di động của chúng tôi với các lời nhắc"
+        }
+      },
+      "cta": {
+        "download": "Tải PDF",
+        "calendar": "Thêm vào lịch",
+        "app": "Mở trong ứng dụng",
+        "email": "Gửi email cho tôi"
+      },
+      "emailForm": {
+        "title": "Gửi kế hoạch qua email",
+        "description": "Chúng tôi sẽ gửi kế hoạch cá nhân hóa của bạn đến địa chỉ email của bạn",
+        "emailLabel": "Địa chỉ email của bạn",
+        "emailPlaceholder": "Nhập email của bạn",
+        "submit": "Gửi kế hoạch",
+        "privacy": "Chúng tôi tôn trọng quyền riêng tư của bạn và sẽ không bao giờ chia sẻ email của bạn với bên thứ ba."
+      },
+      "success": {
+        "title": "Thành công!",
+        "description": "Kế hoạch của bạn đã được gửi đến email của bạn. Kiểm tra hộp thư đến của bạn trong vài phút.",
+        "spam": "Nếu bạn không thấy nó, vui lòng kiểm tra thư mục spam của bạn."
+      },
+      "app": {
+        "download": "Tải Ứng Dụng Của Chúng Tôi",
+        "description": "Tải ứng dụng của chúng tôi để có trải nghiệm học ngôn ngữ tốt nhất. Luyện nói mọi lúc, mọi nơi.",
+        "ios": "Tải về từ App Store",
+        "android": "Tải về từ Google Play",
+        "qrCode": "Quét Mã QR",
+        "qrDescription": "Quét mã QR này bằng camera điện thoại của bạn để tải ứng dụng trực tiếp"
+      },
+      "features": {
+        "title": "Tính Năng Ứng Dụng",
+        "ai": {
+          "title": "Đối Tác Trò Chuyện AI",
+          "description": "Luyện nói với AI của chúng tôi trong môi trường không phán xét"
+        },
+        "feedback": {
+          "title": "Phản Hồi Tức Thì",
+          "description": "Nhận phản hồi thời gian thực về phát âm và ngữ pháp"
+        },
+        "plan": {
+          "title": "Kế Hoạch Cá Nhân Hóa",
+          "description": "Làm theo kế hoạch luyện nói được tùy chỉnh cho bạn"
+        }
+      },
+      "faq": {
+        "title": "Câu Hỏi Thường Gặp",
+        "items": [
+          {
+            "question": "Làm thế nào để tải ứng dụng?",
+            "answer": "Bạn có thể tải ứng dụng của chúng tôi từ App Store cho thiết bị iOS hoặc từ Google Play Store cho thiết bị Android. Chỉ cần nhấp vào các nút tải xuống tương ứng ở trên."
+          },
+          {
+            "question": "Ứng dụng có miễn phí để tải xuống không?",
+            "answer": "Có, phiên bản cơ bản của ứng dụng chúng tôi là miễn phí để tải xuống. Chúng tôi cung cấp các tính năng cao cấp thông qua mua hàng trong ứng dụng."
+          },
+          {
+            "question": "Những ngôn ngữ nào được hỗ trợ?",
+            "answer": "Ứng dụng của chúng tôi hiện hỗ trợ 10 ngôn ngữ bao gồm tiếng Tây Ban Nha, Pháp, Đức, Ý, Bồ Đào Nha, Nhật Bản, Trung Quốc (Phổ thông), Hàn Quốc, Nga và Ả Rập."
+          },
+          {
+            "question": "Mã QR hoạt động như thế nào?",
+            "answer": "Quét mã QR bằng ứng dụng camera của điện thoại. Điều này sẽ đưa bạn trực tiếp đến trang tải ứng dụng trên cửa hàng ứng dụng của thiết bị của bạn."
+          },
+          {
+            "question": "Tôi có thể sử dụng ứng dụng ngoại tuyến không?",
+            "answer": "Một số tính năng của ứng dụng chúng tôi có sẵn ngoại tuyến, nhưng để có trải nghiệm đầy đủ bao gồm luyện nói với AI, cần có kết nối internet."
+          }
+        ]
+      },
+      "support": {
+        "title": "Cần Trợ Giúp?",
+        "description": "Nếu bạn có bất kỳ câu hỏi hoặc cần hỗ trợ, vui lòng liên hệ với đội ngũ hỗ trợ của chúng tôi:",
+        "email": "support@fluentai.com",
+        "facebook": "Facebook"
+      }
+    }
+  }
+}
