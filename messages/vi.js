@@ -136,6 +136,12 @@ export default {
         "Được phát triển từ tháng 8 năm 2023, FluentPal đã nhanh chóng nhận được sự hưởng ứng của người dùng và là sản phẩm không thể thiếu đối với người học ngoại ngữ.",
     },
   },
+  download: {
+    on_tiktok: "Từ ứng dụng Tiktok",
+    tiktok_step_1: "Nhấn vào 3 dấu chấm ở góc trên cùng bên phải",
+    tiktok_step_2: "Chọn vào 'Mở trong trình duyệt'",
+    tiktok_step_3: "Tải app FluentPal từ Appstore hoặc Playstore",
+  },
   affiliate: {
     title: "Trở thành đối tác của FluentPal",
     description:

@@ -133,6 +133,12 @@ export default {
         "Developed since August 2023, FluentPal quickly gained user support and has become an essential product for language learners.",
     },
   },
+  download: {
+    on_tiktok: "On Tiktok browser",
+    tiktok_step_1: "Hit the 3-dots at the top right",
+    tiktok_step_2: "Tap 'Open in browser'",
+    tiktok_step_3: "Download for free from the Appstore / Playstore",
+  },
   affiliate: {
     title: "Become a partner",
     description:
