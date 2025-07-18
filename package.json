@@ -15,7 +15,6 @@
     "@types/better-sqlite3": "^7.6.12",
     "@uiw/react-markdown-preview": "^5.0.7",
     "axios": "^1.6.3",
-    "better-sqlite3": "^11.7.2",
     "chart.js": "^4.4.8",
     "classnames": "^2.3.2",
     "dotenv": "^16.4.7",

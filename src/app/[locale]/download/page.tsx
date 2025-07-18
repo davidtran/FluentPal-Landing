@@ -1,10 +1,9 @@
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Download from "./Download";
 
-export default function Page({ children }: { children: React.ReactNode }) {
+export default function Page() {
   const locale = useLocale();
   const messages = useMessages();
-  console.log(messages);
 
   return (
     <NextIntlClientProvider
