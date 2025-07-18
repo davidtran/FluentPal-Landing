@@ -48,7 +48,10 @@ export default function Download() {
     // Check if user is on TikTok browser
     const userAgent = navigator.userAgent.toLowerCase();
     const isTikTokBrowser =
-      userAgent.includes("tiktok") || userAgent.includes("bytedance");
+      userAgent.includes("tiktok") ||
+      userAgent.includes("bytedance") ||
+      params.get("platform") === "tiktok" ||
+      params.get("platform") === "t";
     setIsTikTok(isTikTokBrowser);
 
     if (!isTikTokBrowser) {
