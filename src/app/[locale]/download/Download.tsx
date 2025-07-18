@@ -11,6 +11,7 @@ import {
   useTranslations,
 } from "next-intl";
 import { useSearchParams } from "next/navigation";
+import { Center } from "@/components/Center";
 
 const timeout = 2000;
 
@@ -53,10 +54,12 @@ export default function Download() {
     if (!isTikTokBrowser) {
       const platform = params.get("platform");
       window.location.href = getDownloadLink(locale, platform || undefined);
+    } else {
+      document.querySelector("#animation")?.remove();
     }
   }, [locale, params]);
 
-  if (true) {
+  if (isTikTok) {
     return (
       <div className="w-full min-h-[100vh] flex flex-col justify-start items-center p-4 bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 px-4">
         <div className="max-w-md text-center text-black flex flex-col items-end justify-start">
@@ -93,10 +96,12 @@ export default function Download() {
     );
   } else {
     return (
-      <div
-        id="animation"
-        className="w-[100px] h-[100px]"
-      />
+      <Center>
+        <div
+          id="animation"
+          className="w-[50px] h-[50px]"
+        />
+      </Center>
     );
   }
 }
