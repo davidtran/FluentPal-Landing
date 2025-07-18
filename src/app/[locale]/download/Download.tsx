@@ -12,7 +12,7 @@ import {
 } from "next-intl";
 import { useSearchParams } from "next/navigation";
 
-const timeout = 2000;
+const timeout = 20000000;
 
 export default function Download() {
   const locale = useLocale();
@@ -64,7 +64,7 @@ export default function Download() {
     }
   }, [locale, params]);
 
-  if (isTikTok) {
+  if (true) {
     return (
       <div className="w-full min-h-[100vh] flex flex-col justify-start items-center p-4 bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 px-4">
         <div className="max-w-md text-center text-black flex flex-col items-end justify-start">
@@ -73,7 +73,7 @@ export default function Download() {
             alt="download-tiktok"
             className="w-[50px] h-[50px]"
           />
-          <div className="backdrop-blur-sm rounded-2xl px-4 py-2 mb-6 bg-white mt-5">
+          <div className="backdrop-blur-sm rounded-2xl px-4 py-4 mb-6 bg-white mt-5">
             <h2 className="text-lg font-semibold mb-2">{t("on_tiktok")}:</h2>
             <ol className="text-left space-y-3">
               <li className="flex items-start">
@@ -99,12 +99,12 @@ export default function Download() {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div
+        id="animation"
+        className="w-[100px] h-[100px]"
+      />
+    );
   }
-
-  return (
-    <div
-      id="animation"
-      className="w-[100px] h-[100px]"
-    />
-  );
 }

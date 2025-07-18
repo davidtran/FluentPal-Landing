@@ -10,7 +10,7 @@ export default function Page() {
       messages={messages}
       locale={locale}
     >
-      <div className="w-full min-h-[100vh] flex justify-center items-center">
+      <div className="w-full min-h-[100vh] flex justify-start items-center">
         <Download />
       </div>
     </NextIntlClientProvider>
