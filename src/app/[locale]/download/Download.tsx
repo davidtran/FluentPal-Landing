@@ -50,13 +50,13 @@ export default function Download() {
       userAgent.includes("tiktok") || userAgent.includes("bytedance");
     setIsTikTok(isTikTokBrowser);
 
-    setTimeout(() => {
+    if (!isTikTokBrowser) {
       const platform = params.get("platform");
       window.location.href = getDownloadLink(locale, platform || undefined);
-    }, timeout);
+    }
   }, [locale, params]);
 
-  if (true) {
+  if (isTikTok) {
     return (
       <div className="w-full min-h-[100vh] flex flex-col justify-start items-center p-4 bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 px-4">
         <div className="max-w-md text-center text-black flex flex-col items-end justify-start">
