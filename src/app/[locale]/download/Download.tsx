@@ -12,7 +12,7 @@ import {
 } from "next-intl";
 import { useSearchParams } from "next/navigation";
 
-const timeout = 20000000;
+const timeout = 2000;
 
 export default function Download() {
   const locale = useLocale();
@@ -50,18 +50,10 @@ export default function Download() {
       userAgent.includes("tiktok") || userAgent.includes("bytedance");
     setIsTikTok(isTikTokBrowser);
 
-    if (!isTikTokBrowser) {
-      // Auto-redirect for non-TikTok browsers
-      setTimeout(() => {
-        const platform = params.get("platform");
-        window.location.href = getDownloadLink(locale, platform || undefined);
-      }, timeout);
-    } else {
-      // Show instructions for TikTok users
-      setTimeout(() => {
-        setShowInstructions(true);
-      }, timeout);
-    }
+    setTimeout(() => {
+      const platform = params.get("platform");
+      window.location.href = getDownloadLink(locale, platform || undefined);
+    }, timeout);
   }, [locale, params]);
 
   if (true) {
